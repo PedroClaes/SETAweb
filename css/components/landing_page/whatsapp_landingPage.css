@@ -1,0 +1,75 @@
+/* Importa as variáveis de cores e outros parâmetros globais */
+@import "../../variables.css";
+
+/* Classe que centraliza o conteúdo dentro do formulário de WhatsApp */
+.local_whatsapp_form {
+  display: flex; /* Define o modelo de layout flexível */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Contêiner que organiza os itens de WhatsApp em uma linha */
+.container_section_whatsapp {
+  display: flex; /* Usa o modelo de layout flexível */
+  flex-direction: row; /* Organiza os itens em uma linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Caixa de estilo do WhatsApp, com fundo e alinhamento dos itens */
+.whatsapp {
+  width: 80%; /* Largura do contêiner em 80% da tela */
+  height: 96px; /* Altura fixa de 96px */
+  background-color: var(--cor-secundaria); /* Cor de fundo definida pela variável */
+  border-radius: 6px; /* Bordas arredondadas */
+  display: flex; /* Modelo de layout flexível */
+  flex-direction: row; /* Organiza os itens em uma linha */
+  justify-content: space-around; /* Espaça os itens igualmente */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
+/* Contêiner para os itens dentro da caixa do WhatsApp */
+.whatsapp_container {
+  display: flex; /* Layout flexível */
+  flex-direction: row; /* Organiza os itens em uma linha */
+  gap: 24px; /* Espaçamento de 24px entre os itens */
+}
+
+/* Estilo para o texto dentro da caixa do WhatsApp */
+.whatsapp_text {
+  font-size: 1rem; /* Tamanho da fonte */
+  color: var(--cor-texto-branco); /* Cor do texto definida pela variável */
+}
+
+/* Estilo para o ícone do WhatsApp */
+#icon_whatsapp {
+  width: 24px; /* Largura do ícone */
+  height: 24px; /* Altura do ícone */
+}
+
+/* Estilo para o botão dentro da caixa do WhatsApp */
+.whatsapp_button {
+  height: 42px; /* Altura do botão */
+  width: 256px; /* Largura do botão */
+  border: none; /* Remove a borda do botão */
+  border-radius: 6px; /* Bordas arredondadas */
+  background-color: var(--cor-fundo-branco); /* Cor de fundo do botão */
+  color: var(--cor-secundaria); /* Cor do texto no botão */
+}
+
+/* Media Query para dispositivos móveis com largura de até 768px */
+@media (max-width: 768px) {
+  /* Esconde o texto no WhatsApp em telas pequenas */
+  .whatsapp_text {
+    display: none; /* Esconde o texto */
+  }
+
+  /* Esconde o ícone do WhatsApp em telas pequenas */
+  #icon_whatsapp {
+    display: none; /* Esconde o ícone */
+  }
+
+  /* Ajusta a margem do botão para dispositivos móveis */
+  .whatsapp_button {
+    margin-left: 3em; /* Adiciona margem à esquerda */
+    margin-right: 3em; /* Adiciona margem à direita */
+  }
+}

@@ -1,0 +1,65 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Definição das variáveis globais do projeto */
+:root {
+  /* Cores principais */
+  --cor-primaria: #0B6225; /* Verde */
+  --cor-secundaria: #8E1B24; /* Vermelho */
+  --cor-tercearia: #06461A; /* Verde escuro */
+  --cor-fundo-branco: white; /* Cor de fundo branco */
+  --cor-texto-branco: white; /* Cor do texto branco */
+  --cor-texto-padrao: #1E1E1E; /* Cor do texto preto */
+
+  /* Fontes utilizadas no site */
+  --fonte-principal: 'Poppins', sans-serif; /* Fonte principal */
+  --fonte-secundaria: "Open Sans", sans-serif; /* Fonte secundária */
+
+  /* Pesos das fontes */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+/* Estilo para fontes com peso regular da Poppins */
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Estilo para fontes com peso semi-negrito da Poppins */
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Estilo para fontes com peso negrito da Poppins */
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Estilo para fontes com peso regular da Open Sans */
+.open-sans-regular {
+  font-family: "Open Sans", sans-serif;
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+}
+
+/* Estilo para fontes com peso semi-negrito da Open Sans */
+.open-sans-semibold {
+  font-family: "Open Sans", sans-serif;
+  font-weight: var(--font-weight-semibold);
+  font-style: normal;
+}
+
+/* Estilo para fontes com peso negrito da Open Sans */
+.open-sans-bold {
+  font-family: "Open Sans", sans-serif;
+  font-weight: var(--font-weight-bold);
+  font-style: normal;
+}

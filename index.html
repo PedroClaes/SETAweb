@@ -1,62 +1,193 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="pt-br">
 
 <head>
+  <!-- Metadados, link para o CSS e favicon do site -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <title>SETA - Seja Bem Vindo!</title>
 
+  <!-- Metadados para SEO e redes sociais -->
+  <meta name="description" content="">
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="">
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <!-- Ícones e manifest para PWA -->
+  <link rel="icon" href="assets/visual_identity/Icon_fundo_SETA.jpg" sizes="any">
+  <link rel="icon" href="assets/visual_identity/Icon_fundo_SETA.jpg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 </head>
 
+<body>
 <header>
-  <div id="header">
-    <div id="logo"><!--LOGO--></div>
-    <div id="elements">
-      <div id="explain">
-        <div><h4>Sobre mim</h4></div>
-        <div><h4>Como Funciona</h4></div>
-      </div>
-      <div id="create">
-        <div id="Login" class="Create"><h4>Login</h4></div>
-        <div class="Create"><h4>Cadastre-se</h4></div>
+  <!-- Cabeçalho com navegação e botões de ação -->
+  <nav>
+    <div id="logo">
+      <img src="assets/visual_identity/Logo_fundo_SETA.jpg" alt="Logo" width="125px">
+    </div>
+    <div id="objects">
+      <!-- Links de navegação -->
+      <ul>
+        <li><a href="#" class=".open-sans-semibold">Sobre mim</a></li>
+        <li><a href="#" class=".open-sans-semibold">Como funciona</a></li>
+      </ul>
+
+      <!-- Botões de login e cadastro -->
+      <div id="botoes">
+        <button class="botao">Entrar</button>
+        <button class="botao">Cadastre-se</button>
       </div>
     </div>
-  </div>
+  </nav>
 </header>
 
-<body>
+<main>
+  <!-- Conteúdo principal com título e descrição -->
+  <h1 class="title poppins-bold">
+    SETA Soluções em<br>Serviços
+  </h1>
+  <p class="subtitle open-sans-regular">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <!-- Botão de solicitação de ensaios -->
+  <button class="botao_apresentation">
+    <p class="text_button poppins-semibold">
+      Solicitar ensaios
+    </p>
+    <img src="assets/icons/Icon_arrow_right.png" alt="" class="icon_botao">
+  </button>
+</main>
 
-  <div id="Titulo1"><h1>SETA Soluções em Serviços</h1></div>
-  <div><h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5></div>
+<section class="sobre_mim">
+  <!-- Seção "Quem sou eu?" com texto e imagem -->
+  <div class="sobre_content">
+    <h2 class="sobre_title poppins-bold">Quem sou eu?</h2>
+    <p class="sobre_subtitle open-sans-regular">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+  <!-- Imagem que acompanha a descrição -->
+  <div class="sobre_img"></div>
+</section>
 
-  <div><!--IMAGEM--></div>
+<section class="servicos">
+  <!-- Seção de exemplos de ensaios -->
+  <h1 class="servicos_title poppins-bold">
+    Exemplos de Ensaios
+  </h1>
+  <div class="templates">
+    <!-- Exibição de exemplos de templates de ensaios -->
+    <div class="template"></div>
+    <div class="template"></div>
+    <div class="template"></div>
+    <div class="template"></div>
+    <div class="template"></div>
+  </div>
+</section>
 
-  <div><h4>Solicitar ensaios</h4></div>
+<section class="como_funciona">
+  <!-- Seção explicando como funciona o trabalho -->
+  <h1 class="como_title poppins-bold">
+    Como funciona meu trabalho?
+  </h1>
+  <!-- Etapas do processo -->
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Etapa 1
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Etapa 2
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Etapa 3
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Etapa 4
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+</section>
 
+<div class="local_whatsapp_form">
+  <!-- Seção para WhatsApp -->
+  <section class="whatsapp">
+    <div class="whatsapp_container">
+      <h4 class="whatsapp_text poppins-bold">
+        Ficou com alguma dúvida? Nos chame no WhatsApp
+      </h4>
+      <img src="assets/icons/Icon_whatsapp.png" alt="" id="icon_whatsapp">
+    </div>
+    <button class="whatsapp_button poppins-bold">Nos chame no WhatsApp</button>
+  </section>
+</div>
 
+<footer>
+  <!-- Rodapé com informações sobre a empresa e links úteis -->
+  <div class="identity_footer">
+    <img src="assets/visual_identity/Logo_fundo_SETA.jpg" alt="Logo SETA" width="150px">
+    <p class="descricao_seta open-sans-semibold">
+      SETA Soluções em Serviços
+    </p>
+  </div>
 
+  <div class="section_footer">
+    <a href="" class="link_footer open-sans-bold">Home</a>
+    <a href="" class="link_footer open-sans-bold">Quem sou eu?</a>
+    <a href="" class="link_footer open-sans-bold">Exemplos de ensaio</a>
+    <a href="" class="link_footer open-sans-bold">Como funciona</a>
+  </div>
 
+  <div class="section_footer">
+    <a href="" class="link_footer open-sans-bold">Instagram: seta_seta</a>
+    <a href="" class="link_footer open-sans-bold">Email: seta@seta.com.br</a>
+    <a href="" class="link_footer open-sans-bold">Local: Rua seta N19</a>
+    <a href="" class="link_footer open-sans-bold">LinkedIn: setaLinkedin</a>
+  </div>
+</footer>
 
-
-
-
-  <!-- Add your site or application content here -->
-
-  <script src="js/app.js"></script>
+<!-- Inclusão do script JavaScript -->
+<script src="js/app.js"></script>
 
 </body>
 

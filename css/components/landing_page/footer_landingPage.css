@@ -1,0 +1,41 @@
+/* Importa as variáveis globais de estilos, como cores */
+@import "../../variables.css";
+
+/* Estilo para o rodapé (footer) */
+footer {
+  width: 100%; /* Largura total */
+  background-color: var(--cor-fundo-branco); /* Cor de fundo do rodapé */
+  padding: 6em; /* Espaçamento interno de 6em */
+  padding-bottom: 4em; /* Espaçamento inferior de 4em */
+  padding-top: 2em; /* Espaçamento superior de 2em */
+  display: flex; /* Usa o modelo de layout flexível */
+  flex-direction: row; /* Organiza os itens na direção de uma linha */
+  justify-content: space-between; /* Espaço entre os itens do rodapé */
+}
+
+/* Estilo para a seção dentro do rodapé */
+.section_footer {
+  display: flex; /* Usa o modelo de layout flexível */
+  flex-direction: column; /* Organiza os itens na direção de uma coluna */
+  justify-content: space-between; /* Espaço entre os itens na coluna */
+}
+
+/* Estilo para os links no rodapé */
+.link_footer {
+  color: var(--cor-texto-padrao); /* Cor do texto do link */
+}
+
+/* Media Query para dispositivos móveis com largura de até 768px */
+@media (max-width: 768px) {
+  /* Ajusta o layout do rodapé para telas pequenas */
+  footer {
+    flex-direction: column; /* Organiza os itens na direção de uma coluna */
+    gap: 48px; /* Espaçamento entre os itens */
+    text-align: center; /* Alinha o texto ao centro */
+  }
+
+  /* Ajusta o layout da seção do rodapé para telas pequenas */
+  .section_footer {
+    gap: 12px; /* Diminui o espaço entre os itens da seção */
+  }
+}
