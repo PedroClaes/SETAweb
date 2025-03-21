@@ -38,6 +38,11 @@
   background-color: var(--cor-fundo-branco);
 }
 
+.text_etapa3{
+  color: var(--cor-texto-branco);
+  padding-bottom: 24px;
+}
+
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
   /* Ajusta o layout da seção de serviços para telas pequenas */
@@ -57,5 +62,9 @@
   .servicos_title {
     font-size: 1.5em;
     padding-bottom: 0px;
+  }
+
+  .text_etapa3{
+    font-size: 0.8em;
   }
 }

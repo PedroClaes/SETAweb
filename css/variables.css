@@ -5,9 +5,9 @@
 /* Definição das variáveis globais do projeto */
 :root {
   /* Cores principais */
-  --cor-primaria: #0B6225; /* Verde */
-  --cor-secundaria: #8E1B24; /* Vermelho */
-  --cor-tercearia: #06461A; /* Verde escuro */
+  --cor-primaria: #007070; /* Verde */
+  --cor-secundaria: #800000; /* Vermelho */
+  --cor-tercearia: #005959; /* Verde escuro */
   --cor-fundo-branco: white; /* Cor de fundo branco */
   --cor-texto-branco: white; /* Cor do texto branco */
   --cor-texto-padrao: #1E1E1E; /* Cor do texto preto */

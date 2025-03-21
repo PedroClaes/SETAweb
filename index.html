@@ -34,32 +34,34 @@
     <div id="objects">
       <!-- Links de navegação -->
       <ul>
-        <li><a href="#" class=".open-sans-semibold">Sobre mim</a></li>
-        <li><a href="#" class=".open-sans-semibold">Como funciona</a></li>
+        <li><a href="#sobreMim" class=".open-sans-semibold">Responsável técnico</a></li>
+        <li><a href="#porqueTrabalhar" class=".open-sans-semibold">Por que trabalhar com SETA</a></li>
+        <li><a href="#exemplosEnsaios" class=".open-sans-semibold">Exemplos de Ensaios</a></li>
+        <li><a href="#tiposServicos" class=".open-sans-semibold">Serviços</a></li>
       </ul>
 
       <!-- Botões de login e cadastro -->
       <div id="botoes">
-        <button class="botao">Entrar</button>
-        <button class="botao">Cadastre-se</button>
+        <button class="botao" id="redirectLoginBtn">Entrar</button>
+        <button class="botao" id="redirectRegisterBtn">Cadastre-se</button>
       </div>
     </div>
   </nav>
 </header>
 
-<main>
+<main id="apresentacao">
   <!-- Conteúdo principal com título e descrição -->
   <h1 class="title poppins-bold">
-    SETA Soluções em<br>Serviços
+    Bem-vindo à SETA, como podemos ajudar?
   </h1>
   <p class="subtitle open-sans-regular">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    A SETA SOLUÇÕES EM SERVIÇOS oferece soluções em inspeção, ensaios não destrutivos, controle de qualidade, assessoria
+    e consultoria para empresas que buscam segurança e precisão. Contamos com profissionais qualificados e certificados,
+    além de parcerias estratégicas para atender rigorosos padrões de qualidade. Nossa missão é garantir a conformidade
+    em todo o processo, do início ao fim.
   </p>
   <!-- Botão de solicitação de ensaios -->
-  <button class="botao_apresentation">
+  <button class="botao_apresentation" id="requestEnsaiosBtn">
     <p class="text_button poppins-semibold">
       Solicitar ensaios
     </p>
@@ -67,26 +69,74 @@
   </button>
 </main>
 
-<section class="sobre_mim">
+<section class="sobre_mim" id="sobreMim">
   <!-- Seção "Quem sou eu?" com texto e imagem -->
   <div class="sobre_content">
-    <h2 class="sobre_title poppins-bold">Quem sou eu?</h2>
+    <h2 class="sobre_title poppins-bold">Responsável técnico </h2>
     <p class="sobre_subtitle open-sans-regular">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      O responsável técnico pelas atividades da SETA SOLUÇÕES EM SERVIÇOS, é Técnico em mecânica, Tecnólogo em gestão da
+      qualidade, profissional com experiência na área industrial desde 2002, certificado nos métodos de ensaio por
+      líquido penetrante, partículas magnéticas, ultrassom, ensaio visual, dimensional de caldeiraria e inspetor de
+      soldagem N1 pela FBTS.
+      <br>
+      Certificado pela ISO-9712 como inspetor N3 nos métodos de líquido penetrante, partículas magnéticas e ultrassom.
     </p>
   </div>
   <!-- Imagem que acompanha a descrição -->
   <div class="sobre_img"></div>
 </section>
 
-<section class="servicos">
+<section class="porque_trabalhar_com_seta" id="porqueTrabalhar">
+  <h1 class="title_porque poppins-bold">
+    Por que trabalhar com SETA?
+  </h1>
+  <div class="etapa">
+    <h2 class="title_etapa2 open-sans-bold">
+      Competencia técnica:
+    </h2>
+    <p class="text_etapa2 open-sans-regular">
+      Equipe certificada e treinada continuamente, aliada a equipamentos que atendem todos os requisitos de controle. O
+      responsável técnico é certificado como N3 pela ISO-9712.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa2 open-sans-bold">
+      Atendimento a normas nacionais e internacionais:
+    </h2>
+    <p class="text_etapa2 open-sans-regular">
+      Todos os produtos, equipamentos e processos atendem as diretrizes normativas aplicáveis garantindo rastreabilidade
+      e conformidade dos serviços e documentos.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa2 open-sans-bold">
+      Soluções personalizadas:
+    </h2>
+    <p class="text_etapa2 open-sans-regular">
+      Entendemos suas necessidades e adaptamos nossos serviços para oferecer a melhor relação custo-benefício.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa2 open-sans-bold">
+      Agilidade e confiabilidade:
+    </h2>
+    <p class="text_etapa2 open-sans-regular">
+      Atendimento às solicitações dos clientes através do SISTEMA SETA que propícia a agilidade e confiabilidade no
+      processo de solicitação de serviços e emissão e controle de relatórios.
+    </p>
+  </div>
+</section>
+
+<section class="servicos" id="exemplosEnsaios">
   <!-- Seção de exemplos de ensaios -->
   <h1 class="servicos_title poppins-bold">
     Exemplos de Ensaios
   </h1>
+  <p class="text_etapa3 open-sans-regular">
+    Atendemos aos mais diversos setores da indústria nacional, como; construção civil, naval, siderúrgica,
+    sucroalcooleira, mineração, energia eólica, termoelétrica, hidroelétrica, metalúrgica, metal mecânica de
+    transformação e óleo & gás.
+  </p>
   <div class="templates">
     <!-- Exibição de exemplos de templates de ensaios -->
     <div class="template"></div>
@@ -97,60 +147,186 @@
   </div>
 </section>
 
-<section class="como_funciona">
+<section class="como_funciona" id="tiposServicos">
   <!-- Seção explicando como funciona o trabalho -->
   <h1 class="como_title poppins-bold">
-    Como funciona meu trabalho?
+    Serviços
   </h1>
   <!-- Etapas do processo -->
   <div class="etapa">
     <h2 class="title_etapa open-sans-bold">
-      Etapa 1
+      Líquido penetrante
     </h2>
     <p class="text_etapa open-sans-regular">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Método de ensaio não destrutivo utilizado para detectar descontinuidades superficiais em materiais sólidos. O
+      líquido penetrante é aplicado na superfície da peça, e após um período de penetração, o excesso é removido e um
+      revelador é aplicado para revelar possíveis descontinuidades.
     </p>
   </div>
   <div class="etapa">
     <h2 class="title_etapa open-sans-bold">
-      Etapa 2
+      Partículas magnéticas
     </h2>
     <p class="text_etapa open-sans-regular">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Método de ensaio não destrutivo que utiliza um campo magnético para detectar descontinuidades em materiais
+      ferromagnéticos. Um campo magnético é induzido e partículas magnéticas são aplicadas na superfície, o acúmulo das
+      partículas nas regiões de descontinuidades formam indicações visíveis.
     </p>
   </div>
   <div class="etapa">
     <h2 class="title_etapa open-sans-bold">
-      Etapa 3
+      Ultrassom
     </h2>
     <p class="text_etapa open-sans-regular">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Método de ensaio não destrutivo que utiliza ondas ultrassónicas para detectar descontinuidades internas em
+      materiais. Um transdutor emite ondas que penetram e percorrem o volume do material e as reflexões internas ou
+      posteriores, permitindo a avaliação da integridade estrutural do material.
     </p>
   </div>
   <div class="etapa">
     <h2 class="title_etapa open-sans-bold">
-      Etapa 4
+      Ensaio visual
     </h2>
     <p class="text_etapa open-sans-regular">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Método de ensaio não destrutivo que envolve a inspeção visual da superfície de um material ou soldagem para
+      identificar descontinuidades visíveis, como trincas, dobras, poros, corrosão ou outros defeitos. Pode ser
+      executado de maneira direta ou indireta por ferramentas como lupas ou câmeras.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Dimensional de caldeiraria
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Método de Inspeção que verifica as dimensões e tolerâncias das peças fabricadas, garantindo que atendam às
+      especificações do projeto. Pode incluir medições de comprimento, largura, altura, rotação e ângulos.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Dureza Brinell portátil
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Método de inspeção que permite medir a dureza de materiais utilizando dispositivos portáteis, que podem ser usados
+      em campo. Técnicas comuns incluem o uso do durômetro portátil Brinell que utiliza cargas e indentadores
+      específicos para gerar impressões no material que indicam a dureza do material.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Medição de camada
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Técnica utilizada para medir a espessura de camadas de revestimento em materiais, como pinturas, inconel ou
+      galvanizações. Pode ser realizada com instrumentos magnéticos ou ultrassônicos
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Boroscopía industrial
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Inspeção visual de áreas de difícil acesso utilizando um boroscópio, que é um instrumento com uma câmera
+      integrada. Permite a visualização interna de componentes como tubulações, vasos e motores etc.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Inspeção de soldagem
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Processo que abrange desde a preparação até a avaliação final da qualidade das soldas em peças e estruturas
+      metálicas para garantir a conformidade do processo e a integridade da solda executada.
+    </p>
+  </div>
+  <h1 class="como_title poppins-bold">
+    Atendimento por demanda:
+  </h1>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Ultrassom phased array
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Técnica avançada de ensaio não destrutivo que utiliza transdutores com múltiplos elementos controlados
+      eletronicamente para gerar e receber ondas ultrassônicas. Permite a visualização e análise em tempo real da
+      integridade de materiais, oferecendo uma imagem mais detalhada e precisa de descontinuidades com possibilidade de
+      registro.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      PMI
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      (Positive Material Identification): Método utilizado para identificar a composição química de materiais metálicos.
+      Utiliza técnicas como espectrometria de fluorescência de raios X (XRF) para garantir que os materiais atendam às
+      especificações de qualidade e segurança
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Correntes parasitas
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      Método de ensaio não destrutivo que utiliza correntes parasitas induzidas para detectar descontinuidades em
+      materiais condutores. As correntes são geradas em um campo magnético e sua interação com descontinuidades fornece
+      informações sobre a integridade superficial do material e características como condutividade, dureza e espessura.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      Dureza portátil UCI
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      O durômetro UCI utiliza a impedância acústica para determinar a dureza de materiais ferrosos, não ferrosos. Ferro
+      fundido e em geometrias complexas e espessuras muito finas que outras técnicas não conseguem medir.
+    </p>
+  </div>
+  <div class="etapa">
+    <h2 class="title_etapa open-sans-bold">
+      ACFM
+    </h2>
+    <p class="text_etapa open-sans-regular">
+      O ensaio ACFM (Alternating Current Field Measurement) é uma técnica de inspeção não destrutiva que identifica e
+      avalia defeitos em materiais metálicos condutores. Utiliza correntes alternadas para detectar e dimensionar
+      descontinuidades sob superfícies pintadas sem a necessidade de remover revestimentos
+    </p>
+  </div>
+  <div class="etapa">
+    <h1 class="como_title poppins-bold">
+      Consultoria especializada
+    </h1>
+    <br>
+    <p class="text_etapa open-sans-regular">
+      *Assessoria e consultoria
+      <br>
+      <br>
+      *Procedimentos técnicos para execução de ensaios
+      <br>
+      <br>
+      *Treinamentos
+      <br>
+      <br>
+      *Supervisão profissional
+      <br>
+      <br>
+      *Auditoria interna e externa
+      <br>
+      <br>
+      *Análise crítica de documentação
+      <br>
+      <br>
+      *Laudos e pareceres técnicos
+      <br>
+      <br>
+      *Desenvolvimento de aplicações
     </p>
   </div>
 </section>
 
 <div class="local_whatsapp_form">
   <!-- Seção para WhatsApp -->
+  <div class="ilusion"></div>
   <section class="whatsapp">
     <div class="whatsapp_container">
       <h4 class="whatsapp_text poppins-bold">
@@ -158,24 +334,25 @@
       </h4>
       <img src="assets/icons/Icon_whatsapp.png" alt="" id="icon_whatsapp">
     </div>
-    <button class="whatsapp_button poppins-bold">Nos chame no WhatsApp</button>
+    <button class="whatsapp_button poppins-bold" id="whatsappBtn">Nos chame no WhatsApp</button>
   </section>
+  <div class="ilusion"></div>
 </div>
 
 <footer>
   <!-- Rodapé com informações sobre a empresa e links úteis -->
   <div class="identity_footer">
     <img src="assets/visual_identity/Logo_fundo_SETA.jpg" alt="Logo SETA" width="150px">
-    <p class="descricao_seta open-sans-semibold">
-      SETA Soluções em Serviços
-    </p>
   </div>
 
   <div class="section_footer">
-    <a href="" class="link_footer open-sans-bold">Home</a>
-    <a href="" class="link_footer open-sans-bold">Quem sou eu?</a>
-    <a href="" class="link_footer open-sans-bold">Exemplos de ensaio</a>
-    <a href="" class="link_footer open-sans-bold">Como funciona</a>
+    <a href="#apresentacao" class="link_footer open-sans-bold">Apresentação</a>
+    <a href="#sobreMim" class="link_footer open-sans-bold">Responsável Técnico</a>
+    <a href="#porqueTrabalhar" class="link_footer open-sans-bold">Por que trabalhar com SETA</a>
+    <a href="#exemplosEnsaios" class="link_footer open-sans-bold">Exemplos de Ensaio</a>
+    <a href="#tiposServicos" class="link_footer open-sans-bold">Serviços</a>
+    <a href="../pages/login.html" class="link_footer open-sans-bold">Entrar</a>
+    <a href="../pages/cadastro.html" class="link_footer open-sans-bold">Cadastre-se</a>
   </div>
 
   <div class="section_footer">

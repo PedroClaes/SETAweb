@@ -1,0 +1,50 @@
+@import "../../variables.css";
+
+.porque_trabalhar_com_seta {
+  width: 100%;
+  padding: 6em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cor-secundaria);
+}
+
+.title_porque{
+  color: var(--cor-texto-branco);
+  font-size: 2.5em;
+  padding-bottom: 0.3em;
+}
+
+.title_etapa2{
+  color: var(--cor-texto-branco);
+  padding-bottom: 6px;
+}
+
+.text_etapa2{
+  color: var(--cor-texto-branco);
+  padding-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .porque_trabalhar_com_seta {
+    padding: 1.5em;
+    padding-top: 1em;
+    gap: 24px;
+  }
+
+  .title_porque {
+    padding-top: 1em;
+    font-size: 1.5em;
+    gap: 24px;
+  }
+
+  .title_etapa2 {
+    font-size: 1em;
+  }
+
+  .text_etapa2 {
+    font-size: 0.8em;
+    padding-bottom: 12px;
+  }
+}

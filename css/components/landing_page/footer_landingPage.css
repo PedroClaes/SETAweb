@@ -3,9 +3,9 @@
 /* Estilo do rodapé */
 footer {
   width: 100%;
-  background-color: var(--cor-fundo-branco);
+  background-color: var(--cor-primaria);
   padding: 6em;
-  padding-bottom: 4em;
+  padding-bottom: 2em;
   padding-top: 2em;
   display: flex;
   flex-direction: row;
@@ -21,7 +21,7 @@ footer {
 
 /* Estilo dos links no rodapé */
 .link_footer {
-  color: var(--cor-texto-padrao);
+  color: var(--cor-fundo-branco);
 }
 
 /* Ajustes para dispositivos móveis */

@@ -9,18 +9,19 @@
   padding-bottom: 3em;
   display: flex;
   flex-direction: column;
+  background-color: var(--cor-fundo-branco);
 }
 
 /* Título principal da seção */
 .como_title {
-  color: var(--cor-texto-branco);
+  color: var(--cor-texto-padrao);
   font-size: 2.5em;
   padding-bottom: 0.8em;
 }
 
 /* Títulos das etapas */
 .title_etapa {
-  color: var(--cor-texto-branco);
+  color: var(--cor-texto-padrao);
   font-size: 1.5em;
   padding-bottom: 0.3em;
 }
@@ -28,7 +29,7 @@
 /* Texto das etapas */
 .text_etapa {
   width: 100%;
-  color: var(--cor-texto-branco);
+  color: var(--cor-texto-padrao);
   font-size: 1.2em;
   padding-bottom: 48px;
 }

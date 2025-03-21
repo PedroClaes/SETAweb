@@ -43,6 +43,9 @@ ul {
 ul li {
   list-style: none;
   margin: 0 42px;
+  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 /* Estilo para os links de navegação. Remove o sublinhado, define a cor do texto como branco e aplica a fonte secundária e estilo semibold. */
@@ -81,11 +84,13 @@ ul li a {
 
 /* Estilo para o segundo botão, com a cor de fundo definida manualmente. */
 #botoes .botao:nth-child(2) {
-  background-color: #205730;
+  background-color: #008080;
 }
 
 /* Media Query para dispositivos móveis (telas com largura menor ou igual a 768px). Esconde os itens de navegação (ul) em telas menores. */
-@media (max-width: 768px) {
+
+
+@media (max-width: 998px) {
   ul {
     display: none; /* Esconde a lista de navegação no mobile */
   }

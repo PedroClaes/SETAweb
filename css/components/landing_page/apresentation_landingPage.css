@@ -14,7 +14,7 @@ main {
 
 /* Subtítulo */
 .subtitle {
-  width: 80%;
+  width: 100%;
   margin-top: 24px;
   color: var(--cor-texto-branco);
   font-size: 1.2em;
@@ -64,6 +64,14 @@ main {
 }
 
 @media (max-width: 425px) {
+  .title {
+    font-size: 2em;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 0.8em;
+    text-align: justify;
+  }
   main{
     padding-top: 5em;
   }

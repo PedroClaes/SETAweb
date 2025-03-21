@@ -1,6 +1,7 @@
 @import "components/landing_page/header_landingPage.css";
 @import "components/landing_page/apresentation_landingPage.css";
 @import "components/landing_page/sobreMim_landingPage.css";
+@import "components/landing_page/porque_trabalhar.css";
 @import "components/landing_page/servicos_landingPage.css";
 @import "components/landing_page/comoFunciona_landingPage.css";
 @import "components/landing_page/whatsapp_landingPage.css";
@@ -16,6 +17,15 @@
 html {
   background-color: var(--cor-primaria);
   line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+main {
+  scroll-margin-top: 100px;
 }
 
 /* Estilos para tornar os elementos invisíveis */
