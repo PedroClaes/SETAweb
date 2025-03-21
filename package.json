@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/PedroClaes/SETAweb.git"
   },
-  "license": "ISC",
+  "license": "Proprietary",
   "author": "Matheus de Freitas Gabriel",
   "type": "module",
   "main": "webpack.common.js",
