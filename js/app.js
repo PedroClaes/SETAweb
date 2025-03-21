@@ -16,8 +16,8 @@ requestEnsaiosBtn.onclick = () => {
 }
 
 whatsappBtn.onclick = () => {
-  const telefone = "5511973456975"
-  const mensagem = "Bom dia, fiquei com uma duvida sobre o seu website"
+  const telefone = "5511920402700"
+  const mensagem = "Olá tudo bem, poderia me tirar algumas duvidas?"
 
   const mensagemCodificada = encodeURIComponent(mensagem);
 
