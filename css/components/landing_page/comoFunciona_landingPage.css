@@ -1,61 +1,57 @@
-/* Importa as variáveis globais de estilos, como cores */
+/* Importação das variáveis globais */
 @import "../../variables.css";
 
-/* Estilos gerais para a seção "como_funciona" */
+/* Seção "como funciona" */
 .como_funciona {
-  width: 100%; /* Define a largura da seção para 100% */
-  padding: 6em; /* Espaçamento interno de 6em */
-  padding-top: 3em; /* Espaçamento superior de 3em */
-  padding-bottom: 3em; /* Espaçamento inferior de 3em */
-  display: flex; /* Usa o modelo de layout flexível */
-  flex-direction: column; /* Organiza os itens na direção de uma coluna */
+  width: 100%;
+  padding: 6em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Estilo para o título principal da seção "como_funciona" */
+/* Título principal da seção */
 .como_title {
-  color: var(--cor-texto-branco); /* Cor do texto branca */
-  font-size: 2.5em; /* Tamanho da fonte 2.5em */
-  padding-bottom: 0.8em; /* Espaçamento inferior de 0.8em */
+  color: var(--cor-texto-branco);
+  font-size: 2.5em;
+  padding-bottom: 0.8em;
 }
 
-/* Estilo para os títulos das etapas */
+/* Títulos das etapas */
 .title_etapa {
-  color: var(--cor-texto-branco); /* Cor do texto branca */
-  font-size: 1.5em; /* Tamanho da fonte 1.5em */
-  padding-bottom: 0.3em; /* Espaçamento inferior de 0.3em */
+  color: var(--cor-texto-branco);
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
 }
 
-/* Estilo para o texto das etapas */
+/* Texto das etapas */
 .text_etapa {
-  width: 100%; /* Largura total do texto */
-  color: var(--cor-texto-branco); /* Cor do texto branca */
-  font-size: 1.2em; /* Tamanho da fonte 1.2em */
-  padding-bottom: 48px; /* Espaçamento inferior de 48px */
+  width: 100%;
+  color: var(--cor-texto-branco);
+  font-size: 1.2em;
+  padding-bottom: 48px;
 }
 
-/* Media Query para dispositivos móveis com largura de até 768px */
+/* Ajustes para telas menores */
 @media (max-width: 768px) {
-  /* Ajusta os espaçamentos e o layout para telas pequenas */
   .como_funciona {
-    padding: 1.5em; /* Diminui o padding para 1.5em */
-    padding-top: 1em; /* Diminui o padding superior para 1em */
-    gap: 24px; /* Adiciona um espaçamento entre os itens */
+    padding: 1.5em;
+    padding-top: 1em;
+    gap: 24px;
   }
 
-  /* Reduz o tamanho do título principal em telas pequenas */
   .como_title {
-    font-size: 1.5em; /* Tamanho da fonte reduzido para 1.5em */
-    padding-bottom: 0.1em; /* Diminui o padding inferior */
+    font-size: 1.5em;
+    padding-bottom: 0.1em;
   }
 
-  /* Ajusta o tamanho do título das etapas em telas pequenas */
   .title_etapa {
-    font-size: 1.3em; /* Tamanho da fonte reduzido para 1.3em */
+    font-size: 1.3em;
   }
 
-  /* Ajusta o tamanho do texto das etapas em telas pequenas */
   .text_etapa {
-    font-size: 0.8em; /* Tamanho da fonte reduzido para 0.8em */
-    padding-bottom: 12px; /* Diminui o padding inferior */
+    font-size: 0.8em;
+    padding-bottom: 12px;
   }
 }

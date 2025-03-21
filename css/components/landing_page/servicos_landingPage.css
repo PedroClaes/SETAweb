@@ -1,63 +1,61 @@
-/* Importa as variáveis globais de estilos, como cores */
 @import "../../variables.css";
 
 /* Estilo para a seção de serviços */
 .servicos {
-  width: 100%; /* Largura total da seção */
-  padding: 6em; /* Espaçamento interno de 6em */
-  padding-top: 3em; /* Espaçamento superior de 3em */
-  padding-bottom: 3em; /* Espaçamento inferior de 3em */
-  /* Define um fundo com um gradiente de cor preta (com transparência) e uma imagem */
+  width: 100%;
+  padding: 6em;
+  padding-top: 3em;
+  padding-bottom: 3em;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
   url('https://www.labteste.com.br/imagens/informacoes/ensaio-dureza-rockwell-04.jpg');
-  background-size: cover; /* Faz a imagem de fundo cobrir toda a área da seção */
-  background-position: center; /* Centraliza a imagem de fundo */
-  display: flex; /* Usa o modelo de layout flexível */
-  flex-direction: column; /* Organiza os itens na direção de uma coluna */
-  z-index: -1; /* Coloca o elemento abaixo de outros elementos (se houver) */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
 }
 
 /* Estilo para o título da seção de serviços */
 .servicos_title {
-  color: var(--cor-texto-branco); /* Cor do texto do título */
-  font-size: 2.5em; /* Tamanho da fonte do título */
-  padding-bottom: 24px; /* Espaçamento inferior do título */
+  color: var(--cor-texto-branco);
+  font-size: 2.5em;
+  padding-bottom: 24px;
 }
 
 /* Estilo para o contêiner de templates */
 .templates {
-  display: flex; /* Usa o modelo de layout flexível */
-  flex-direction: row; /* Organiza os itens na direção de uma linha */
-  gap: 1em; /* Espaçamento de 1em entre os itens */
-  overflow-x: scroll; /* Permite rolar horizontalmente se necessário */
-  scrollbar-width: none; /* Remove a barra de rolagem */
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
 
 /* Estilo para cada template dentro da seção de serviços */
 .template {
-  min-width: 218px; /* Largura mínima do template */
-  min-height: 296px; /* Altura mínima do template */
-  background-color: var(--cor-fundo-branco); /* Cor de fundo do template */
+  min-width: 218px;
+  min-height: 296px;
+  background-color: var(--cor-fundo-branco);
 }
 
-/* Media Query para dispositivos móveis com largura de até 768px */
+/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
   /* Ajusta o layout da seção de serviços para telas pequenas */
   .servicos {
-    padding: 1.5em; /* Reduz o padding interno */
-    padding-top: 1em; /* Reduz o padding superior */
-    gap: 24px; /* Ajusta o gap entre os itens */
+    padding: 1.5em;
+    padding-top: 1em;
+    gap: 24px;
   }
 
   /* Ajusta o layout do contêiner de templates para telas pequenas */
   .templates {
-    width: 100%; /* Largura total */
-    overflow-x: scroll; /* Permite rolar horizontalmente */
+    width: 100%;
+    overflow-x: scroll;
   }
 
   /* Ajusta o tamanho do título para telas pequenas */
   .servicos_title {
-    font-size: 1.5em; /* Reduz o tamanho da fonte */
-    padding-bottom: 0px; /* Remove o padding inferior */
+    font-size: 1.5em;
+    padding-bottom: 0px;
   }
 }

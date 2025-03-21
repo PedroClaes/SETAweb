@@ -1,74 +1,73 @@
-/* Importa as variáveis globais de estilos, como cores */
 @import "../../variables.css";
 
 /* Estilo para a seção "Sobre mim" */
 .sobre_mim {
-  width: 100%; /* Largura total da seção */
-  background-color: var(--cor-fundo-branco); /* Cor de fundo da seção */
-  padding: 6em; /* Espaçamento interno de 6em */
-  padding-top: 3em; /* Espaçamento superior de 3em */
-  padding-bottom: 3em; /* Espaçamento inferior de 3em */
-  display: flex; /* Usa o modelo de layout flexível */
-  justify-content: space-between; /* Distribui os itens igualmente com espaço entre eles */
-  flex-direction: row; /* Organiza os itens na direção de uma linha */
+  width: 100%;
+  background-color: var(--cor-fundo-branco);
+  padding: 6em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 /* Estilo para o conteúdo da seção "Sobre mim" */
 .sobre_content {
-  width: 30%; /* Largura de 30% do contêiner */
+  width: 30%;
 }
 
 /* Estilo para o título da seção "Sobre mim" */
 .sobre_title {
-  color: var(--cor-texto-padrao); /* Cor do título */
-  font-size: 2.5em; /* Tamanho da fonte do título */
+  color: var(--cor-texto-padrao);
+  font-size: 2.5em;
 }
 
 /* Estilo para o subtítulo da seção "Sobre mim" */
 .sobre_subtitle {
-  color: var(--cor-texto-padrao); /* Cor do subtítulo */
-  font-size: 1.2em; /* Tamanho da fonte do subtítulo */
+  color: var(--cor-texto-padrao);
+  font-size: 1.2em;
 }
 
 /* Estilo para a imagem da seção "Sobre mim" */
 .sobre_img {
-  width: 60%; /* Largura de 60% da área disponível */
-  height: 405px; /* Altura da imagem */
-  background-color: #888888; /* Cor de fundo da imagem, caso não carregue */
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmDUj8kImPxrxpnqLyH3VFyBwHibhgmTD5Q&s"); /* Imagem de fundo */
-  background-size: cover; /* Faz a imagem cobrir toda a área disponível */
-  background-position: center; /* Centraliza a imagem dentro da área */
+  width: 60%;
+  height: 405px;
+  background-color: #888888;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmDUj8kImPxrxpnqLyH3VFyBwHibhgmTD5Q&s");
+  background-size: cover;
+  background-position: center;
 }
 
-/* Media Query para dispositivos móveis com largura de até 768px */
+/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
   /* Ajusta o layout da seção "Sobre mim" para telas pequenas */
   .sobre_mim {
-    flex-direction: column; /* Alinha os itens na direção de uma coluna */
-    padding: 1.5em; /* Reduz o padding interno */
-    padding-top: 1em; /* Reduz o padding superior */
-    gap: 24px; /* Adiciona espaço entre os itens */
+    flex-direction: column;
+    padding: 1.5em;
+    padding-top: 1em;
+    gap: 24px;
   }
 
   /* Ajusta o conteúdo da seção "Sobre mim" para telas pequenas */
   .sobre_content {
-    width: 100%; /* Largura total */
-    text-align: justify; /* Justifica o texto */
+    width: 100%;
+    text-align: justify;
   }
 
   /* Ajusta o título da seção "Sobre mim" para telas pequenas */
   .sobre_title {
-    font-size: 1.5em; /* Reduz o tamanho da fonte */
-    padding-bottom: 0.5em; /* Ajusta o espaçamento inferior */
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
   }
 
   /* Ajusta o subtítulo da seção "Sobre mim" para telas pequenas */
   .sobre_subtitle {
-    font-size: 0.8em; /* Reduz o tamanho da fonte */
+    font-size: 0.8em;
   }
 
   /* Ajusta a imagem da seção "Sobre mim" para telas pequenas */
   .sobre_img {
-    width: 100%; /* Largura total */
+    width: 100%;
   }
 }

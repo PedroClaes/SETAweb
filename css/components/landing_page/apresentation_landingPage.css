@@ -1,65 +1,76 @@
-/* Estilos para o elemento principal (main) */
+/* Estilos gerais */
 main {
-  padding: 6em; /* Espaçamento interno padrão */
+  padding: 6em; /* Espaçamento interno */
   padding-top: 10em; /* Espaço superior */
   padding-bottom: 4em; /* Espaço inferior */
-  overflow-x: hidden; /* Impede o overflow horizontal */
+  overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
-/* Estilos para o título */
+/* Título principal */
 .title {
-  color: var(--cor-texto-branco); /* Cor do título */
-  font-size: 5em; /* Tamanho da fonte */
+  color: var(--cor-texto-branco);
+  font-size: 5em;
 }
 
-/* Estilos para o subtítulo */
+/* Subtítulo */
 .subtitle {
-  width: 80%; /* Largura do subtítulo */
-  margin-top: 24px; /* Margem superior */
-  color: var(--cor-texto-branco); /* Cor do subtítulo */
-  font-size: 1.2em; /* Tamanho da fonte */
+  width: 80%;
+  margin-top: 24px;
+  color: var(--cor-texto-branco);
+  font-size: 1.2em;
 }
 
-/* Estilos para o botão de apresentação */
+/* Botão de apresentação */
 .botao_apresentation {
-  margin-top: 24px; /* Margem superior */
-  padding-left: 64px; /* Espaçamento à esquerda */
-  padding-right: 64px; /* Espaçamento à direita */
-  display: flex; /* Flexbox para o botão */
-  flex-direction: row; /* Itens na linha */
-  gap: 24px; /* Espaçamento entre os itens */
-  align-items: center; /* Alinha os itens no centro */
-  height: 56px; /* Altura do botão */
-  background-color: var(--cor-secundaria); /* Cor de fundo */
-  border: none; /* Sem borda */
-  cursor: pointer; /* Cursor de ponteiro */
-  border-radius: 6px; /* Bordas arredondadas */
+  margin-top: 24px;
+  padding-left: 64px;
+  padding-right: 64px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  height: 56px;
+  background-color: var(--cor-secundaria);
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
-/* Estilos para o texto do botão */
+/* Texto do botão */
 .text_button {
-  font-size: 16px; /* Tamanho da fonte */
-  color: var(--cor-texto-branco); /* Cor do texto */
+  font-size: 16px;
+  color: var(--cor-texto-branco);
 }
 
-/* Media query para telas menores que 768px (mobile) */
+/* Ajustes para telas menores */
 @media (max-width: 768px) {
   main {
-    padding: 1.5em; /* Reduz o espaçamento */
-    padding-top: 8em; /* Ajusta o padding superior */
+    padding: 1.5em;
+    padding-top: 8em;
   }
 
   .title {
-    font-size: 3em; /* Reduz o tamanho do título */
+    font-size: 3em;
   }
 
   .subtitle {
-    font-size: 0.8em; /* Reduz o tamanho do subtítulo */
+    font-size: 0.8em;
   }
 
   .botao_apresentation {
-    width: 100%; /* Faz o botão ocupar toda a largura */
-    display: flex; /* Flexbox para o botão */
-    justify-content: space-between; /* Espaço entre os itens */
+    width: 60%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 425px) {
+  main{
+    padding-top: 5em;
+  }
+  .botao_apresentation {
+    width: 100%;
+    padding-right: 24px;
+    padding-left: 24px;
+    justify-content: space-between;
   }
 }

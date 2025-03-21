@@ -90,3 +90,28 @@ ul li a {
     display: none; /* Esconde a lista de navegação no mobile */
   }
 }
+
+@media (max-width: 425px) {
+  ul {
+    display: none; /* Esconde a lista de navegação no mobile */
+  }
+
+  nav #logo img{
+    padding-top: 6px;
+    width: 80px;
+  }
+
+  #botoes .botao{
+    height: 3em;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  nav{
+    height: 3em;
+  }
+
+  header{
+    height: 3em;
+  }
+}
