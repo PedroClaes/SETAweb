@@ -1,25 +1,26 @@
 {
-  "name": "-",
+  "name": "seta_website",
   "version": "0.0.1",
-  "description": "",
   "private": true,
+  "description": "A SETA Soluções em Serviços oferece uma ampla gama de soluções em inspeção, ensaios não destrutivos e controle de qualidade, com foco em segurança, precisão e conformidade. Com profissionais qualificados e equipamentos especializados, garantimos a excelência em nossos serviços de assessoria, consultoria técnica e treinamentos. Atendemos às necessidades de empresas que buscam os mais rigorosos padrões de qualidade, em conformidade com as normas nacionais e internacionais.",
   "keywords": [],
+  "homepage": "https://github.com/PedroClaes/SETAweb#readme",
+  "bugs": {
+    "url": "https://github.com/PedroClaes/SETAweb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroClaes/SETAweb.git"
+  },
   "license": "ISC",
-  "author": "",
+  "author": "Matheus de Freitas Gabriel",
+  "type": "module",
+  "main": "webpack.common.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js"
   },
-  "devDependencies": {
-    "copy-webpack-plugin": "^11.0.0",
-    "html-webpack-plugin": "^5.6.0",
-    "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4",
-    "webpack-merge": "^5.10.0"
-  },
-  "main": "webpack.common.js",
   "dependencies": {
     "accepts": "^1.3.8",
     "acorn": "^8.14.1",
@@ -281,13 +282,12 @@
     "wildcard": "^2.0.1",
     "ws": "^8.18.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PedroClaes/SETAweb.git"
-  },
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/PedroClaes/SETAweb/issues"
-  },
-  "homepage": "https://github.com/PedroClaes/SETAweb#readme"
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^5.10.0"
+  }
 }
