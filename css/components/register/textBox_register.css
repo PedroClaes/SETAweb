@@ -1,0 +1,26 @@
+@import "../../variables.css";
+
+.label_textBox{
+  font-size: 16px;
+  color: var(--cor-texto-padrao);
+}
+
+.text_box{
+  height: 48px;
+  border: 2px solid var(--cor-borda_textBox);
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.text_box:hover{
+  border: 2px solid #808080;
+}
+
+.text_box:focus{
+  border: 2px solid var(--cor-texto-padrao);
+}
+
+.error_message{
+  color: #ff0000;
+  display: none;
+}

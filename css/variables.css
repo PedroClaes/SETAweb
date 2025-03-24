@@ -11,6 +11,7 @@
   --cor-fundo-branco: white; /* Cor de fundo branco */
   --cor-texto-branco: white; /* Cor do texto branco */
   --cor-texto-padrao: #1E1E1E; /* Cor do texto preto */
+  --cor-borda_textBox: #E4E4E4; /* Cor do texto preto */
 
   /* Fontes utilizadas no site */
   --fonte-principal: 'Poppins', sans-serif; /* Fonte principal */
