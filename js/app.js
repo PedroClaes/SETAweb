@@ -8,8 +8,11 @@ redirectLoginBtn.onclick = () => {
 }
 
 redirectRegisterBtn.onclick = () => {
-  window.location.href = "../pages/cadastro.html";
+  setTimeout(() => {
+    window.location.href = "../pages/cadastro.html";
+  }, 1000); // 1 segundo de delay
 }
+
 
 requestEnsaiosBtn.onclick = () => {
   window.location.href = "../pages/login.html";
