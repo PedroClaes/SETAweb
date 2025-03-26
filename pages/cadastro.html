@@ -2,9 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cadastre-se - SETA</title>
+  <link rel="stylesheet" href="../css/style_register.css">
 </head>
 <body>
+<main>
+  <form id="cadastro_form">
+    <h1 class="register_title poppins-bold">
+      Cadastre-se
+    </h1>
 
+    <div class="register_box">
+      <label for="cpf_cnpj" class="label_textBox open-sans-semibold">CPF/CNPJ</label>
+      <input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="Digite seu CPF/CNPJ"
+             class="text_box poppins-regular">
+      <span class="error_message poppins-regular" id="cpf_error">CPF ou CNPJ Invalidos</span>
+    </div>
+
+    <div class="register_box">
+      <label for="nome_completo" class="label_textBox open-sans-semibold">Nome completo/Nome da empresa</label>
+      <input type="text" name="nome" id="nome_completo" placeholder="Digite seu nome ou nome da empresa"
+             class="text_box poppins-regular">
+      <span class="error_message poppins-regular" id="nome_error">Deve conter nome e sobrenome</span>
+    </div>
+
+    <div class="register_box">
+      <label for="email" class="label_textBox open-sans-semibold">Email</label>
+      <input type="email" name="email" id="email" placeholder="Digite seu email" class="text_box poppins-regular">
+      <span class="error_message poppins-regular" id="email_error">Email invalido</span>
+    </div>
+
+    <div class="register_box">
+      <label for="senha" class="label_textBox open-sans-semibold">Senha</label>
+      <input type="password" name="senha" id="senha" placeholder="Digite sua senha" class="text_box poppins-regular">
+      <span class="error_message poppins-regular" id="senha_error">A senha deve conter mais de 8 caracteres</span>
+    </div>
+
+    <div class="register_box">
+      <label for="confirmar_senha" class="label_textBox open-sans-semibold">Confirmar senha</label>
+      <input type="password" name="senha" id="confirmar_senha" placeholder="Digite sua confirmação de senha"
+             class="text_box poppins-regular">
+      <span class="error_message poppins-regular"
+            id="confirmar_senha_error">As senhas não são iguais</span>
+    </div>
+
+    <button type="submit" class="register_btn"><p class="button_text_register poppins-semibold">Cadastrar-se</p> <img
+      src="/assets/icons/Icon_arrow_right.png" alt=""></button>
+  </form>
+  <img src="https://www.labteste.com.br/imagens/informacoes/ensaio-dureza-rockwell-04.jpg" alt="" class="register_img">
+</main>
+
+<script type="module" src="../js/register/main_register.js"></script>
 </body>
 </html>

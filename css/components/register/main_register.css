@@ -1,0 +1,59 @@
+@import "../../variables.css";
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch; /* Garante que os itens se estiquem para ocupar o espaço disponível */
+  height: 100vh; /* Garantir que o main ocupe toda a altura da tela */
+}
+.register_title{
+  color: var(--cor-texto-padrao);
+  font-size: 32px;
+}
+form {
+  width: 50%; /* Manter o form em 50% da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 3em;
+  box-sizing: border-box; /* Para garantir que o padding não quebre o layout */
+  overflow-y: auto; /* Permite rolar se o conteúdo ultrapassar a altura disponível */
+}
+
+.register_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.register_img {
+  height: 100vh; /* Garante que a imagem ocupe toda a altura da tela */
+  width: 50%;
+  object-fit: cover; /* Faz a imagem se ajustar sem esticar */
+  display: block;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* Empilha os itens na vertical */
+  }
+
+  .register_title{
+    font-size: 24px;
+  }
+
+  .register_img {
+    display: none; /* Esconde a imagem em telas menores */
+  }
+
+  form {
+    width: 100%; /* Faz o form ocupar toda a largura da tela */
+    padding-left: 1em; /* Ajusta o padding para telas menores */
+    padding-right: 1em;
+    padding-top: 2em; /* Ajusta o espaçamento superior */
+  }
+}
