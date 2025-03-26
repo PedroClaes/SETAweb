@@ -1,7 +1,7 @@
 @import "components/register/button_register.css";
 @import "components/register/textBox_register.css";
 @import "components/register/main_register.css";
-@import "../css/variables.css";
+@import "css/variables.css";
 
 /* Reset de estilos para garantir consistência entre os navegadores */
 * {

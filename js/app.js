@@ -4,18 +4,18 @@ const requestEnsaiosBtn = document.getElementById("requestEnsaiosBtn");
 const whatsappBtn = document.getElementById("whatsappBtn");
 
 redirectLoginBtn.onclick = () => {
-  window.location.href = "../pages/login.html";
+  window.location.href = "pages/login.html";
 }
 
 redirectRegisterBtn.onclick = () => {
   setTimeout(() => {
-    window.location.href = "../pages/cadastro.html";
+    window.location.href = "pages/cadastro.html";
   }, 1000); // 1 segundo de delay
 }
 
 
 requestEnsaiosBtn.onclick = () => {
-  window.location.href = "../pages/login.html";
+  window.location.href = "pages/login.html";
 }
 
 whatsappBtn.onclick = () => {
