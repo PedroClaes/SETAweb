@@ -1,0 +1,33 @@
+@import "components/solicitacoes/modal_solicitacoes.css";
+@import "components/solicitacoes/header_solicitacoes.css";
+@import "components/solicitacoes/aside_solicitacoes.css";
+@import "components/solicitacoes/form_solicitacoes.css";
+@import "/css/variables.css";
+
+/* Reset de estilos para garantir consistência entre os navegadores */
+/* Reset de estilos para garantir consistência entre os navegadores */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%; /* Garantir que o html e body ocupem 100% */
+  width: 100%;  /* Garantir que o body ocupe 100% da largura */
+}
+
+body {
+  background-color: var(--cor-fundo-branco) !important;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: row; /* Ou 'column' dependendo do layout desejado */
+  height: calc(100% - 80px); /* Garantir que main ocupe 100% da altura */
+}
+
+

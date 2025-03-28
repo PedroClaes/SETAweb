@@ -1,0 +1,9 @@
+section {
+  flex-grow: 1; /* Ocupa o restante do espaço disponível */
+  height: 100%; /* Garantir que a section ocupe 100% da altura */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}

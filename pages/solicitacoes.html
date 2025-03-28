@@ -2,9 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Solicitacoes - SETA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solicitações - SETA</title>
+  <link rel="stylesheet" href="../css/style_solicitacoes.css">
 </head>
 <body>
-<h1>testtte socliticacoes</h1>
+
+<header>
+  <button class="menuToogle">&#9776;</button>
+  <img src="../assets/visual_identity/Logo_fundo_SETA.jpg" alt="Logotipo SETA" width="100px" height="50px">
+</header>
+
+<main>
+  <aside id="sideMenu">
+    <ul>
+      <li>
+        <h2 class="userName"></h2>
+      </li>
+      <li class="notAdministrator">
+        <button id="navSolic">Solicitações</button>
+      </li>
+      <li class="administrator">
+        <button id="navDocs">Documentos</button>
+      </li>
+      <li class="administrator">
+        <button id="navEqup">Equipamentos</button>
+      </li>
+      <li class="administrator">
+        <button id="navProd">Produtos</button>
+      </li>
+      <li class="notAdministrator">
+        <button id="exitAccount">Sair da conta</button>
+      </li>
+    </ul>
+    <div class="sectionBtnSolicitarEnsaio">
+      <button>Solicitar um ensaio <img src="../assets/icons/Icon_arrow_right.png"
+                                              alt="Icone de seta apontada para a direita"></button>
+    </div>
+  </aside>
+
+  <section>
+    <h1 class="poppins-bold">Solicitar ensaios</h1>
+    <form id="rastreabilityForm">
+      <fieldset>
+        <h3 class="titleSectionForm poppins-semibold">Rastreabilidade</h3>
+
+        <div class="formGroup">
+          <label class="labelForm open-sans-semibold" for="description">Descrição da peça</label>
+          <input class="inputForm" type="text" id="description" name="description" required
+                 placeholder="Digite a descrição da peça">
+        </div>
+        <div class="formGroup">
+          <label class="labelForm open-sans-semibold" for="desenho">Desenho/Especificação</label>
+          <input class="inputForm" type="text" id="desenho" name="desenho" required placeholder="PN:">
+        </div>
+
+        <div id="identifications">
+          <button type="button" id="addIdentification">+</button>
+          <div class="inputIdentificationGroup hidden" id="corridaGroup">
+            <label for="corrida" class="open-sans-semibold">Corrida:</label>
+            <input type="text" id="corrida" name="corrida" placeholder="Corrida:" class="open-sans-semibold">
+          </div>
+          <div class="inputIdentificationGroup hidden" id="pedidoGroup">
+            <label for="pedido" class="open-sans-semibold">Pedido</label>
+            <input type="text" id="pedido" name="pedido" placeholder="Pedido:" class="open-sans-semibold">
+          </div>
+          <div class="inputIdentificationGroup hidden" id="opGroup">
+            <label for="op" class="open-sans-semibold">OP:</label>
+            <input type="text" id="op" name="op" placeholder="OP:" class="open-sans-semibold">
+          </div>
+          <div class="inputIdentificationGroup hidden" id="osGroup">
+            <label for="os" class="open-sans-semibold">OS:</label>
+            <input type="text" id="os" name="os" placeholder="OS:" class="open-sans-semibold">
+          </div>
+          <div class="inputIdentificationGroup hidden" id="poGroup">
+            <label for="po" class="open-sans-semibold">PO:</label>
+            <input type="text" id="po" name="po" placeholder="PO:" class="open-sans-semibold">
+          </div>
+          <div class="inputIdentificationGroup hidden" id="pnGroup">
+            <label for="pn" class="open-sans-semibold">PN:</label>
+            <input type="text" id="pn" name="pn" placeholder="PN:" class="open-sans-semibold">
+          </div>
+          <div class="inputIdentificationGroup hidden" id="nsGroup">
+            <label for="ns" class="open-sans-semibold">NºS:</label>
+            <input type="text" id="ns" name="ns" placeholder="NºS:" class="open-sans-semibold">
+          </div>
+          <div class="inputIdentificationGroup hidden" id="snGroup">
+            <label for="sn" class="open-sans-semibold">SN:</label>
+            <input type="text" id="sn" name="sn" placeholder="SN:" class="open-sans-semibold">
+          </div>
+          <div class="inputIdentificationGroup hidden" id="ordenGroup">
+            <label for="orden" class="open-sans-semibold">ORDEN:</label>
+            <input type="text" id="orden" name="orden" placeholder="ORDEN:" class="open-sans-semibold">
+          </div>
+          <div class="inputIdentificationGroup hidden" id="orderGroup">
+            <label for="order" class="open-sans-semibold">ORDER:</label>
+            <input type="text" id="order" name="order" placeholder="ORDER:" class="open-sans-semibold">
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </section>
+</main>
+
+<div id="identificationModal" class="modal">
+  <h3 class="poppins-bold">Selecione até 5 identificações</h3>
+  <form id="identificationForm">
+    <label><input type="checkbox" value="corrida" class="open-sans-semibold">CORRIDA</label><br>
+    <label><input type="checkbox" value="pedido" class="open-sans-semibold"> PEDIDO</label><br>
+    <label><input type="checkbox" value="op" class="open-sans-semibold"> OP</label><br>
+    <label><input type="checkbox" value="os" class="open-sans-semibold"> OS</label><br>
+    <label><input type="checkbox" value="po" class="open-sans-semibold"> PO</label><br>
+    <label><input type="checkbox" value="pn" class="open-sans-semibold"> PN</label><br>
+    <label><input type="checkbox" value="ns" class="open-sans-semibold"> NºS</label><br>
+    <label><input type="checkbox" value="sn" class="open-sans-semibold"> SN:</label><br>
+    <label><input type="checkbox" value="orden" class="open-sans-semibold"> ORDEN:</label><br>
+    <label><input type="checkbox" value="order" class="open-sans-semibold"> ORDER:</label><br>
+    <button type="button" id="confirmSelection" class="open-sans-semibold">Confirmar</button>
+  </form>
+</div>
+
+<script type="module" src="../js/solicitacao/main_solicitacao.js"></script>
+
 </body>
 </html>
