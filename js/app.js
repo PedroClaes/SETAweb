@@ -2,6 +2,7 @@ const redirectLoginBtn = document.getElementById("redirectLoginBtn");
 const redirectRegisterBtn = document.getElementById("redirectRegisterBtn");
 const requestEnsaiosBtn = document.getElementById("requestEnsaiosBtn");
 const whatsappBtn = document.getElementById("whatsappBtn");
+const redirectEntrarBtn = document.getElementById("redirectEntrarBtn");
 
 redirectLoginBtn.onclick = () => {
   window.location.href = "pages/login.html";
@@ -13,10 +14,11 @@ redirectRegisterBtn.onclick = () => {
   }, 1000); // 1 segundo de delay
 }
 
-
 requestEnsaiosBtn.onclick = () => {
   window.location.href = "pages/login.html";
 }
+
+
 
 whatsappBtn.onclick = () => {
   const telefone = "5511920402700"

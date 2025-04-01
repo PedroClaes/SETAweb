@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Login - SETA</title>
-</head>
-<body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/entrar.css">
+  </head>
+  <body>
+    <div id="login-container">
 
-</body>
+      <div class="elemento">
+        <img src="assets/visual_identily/Logo_SETA.png" alt="" id="logoLogin">
+        <h1 id="titulo">Log-in</h1>
+        <div>
+          <H5 class="org" id="emailtxt">Email</H5>
+          <input type="email" class="inserir org" id="inemailtxt" placeholder="Digite o seu email" required>
+        </div>
+        <div>
+          <H5 class="org" id="senhatxt">Senha</H5>
+          <input type="password" class="inserir org" id="insenhatxt" placeholder="Digite sua senha" required>
+        </div>
+        <button type="button" id="loginButton" class="enterBTN">
+          <p class="texto_botao">Continuar</p>
+          <img src="/assets/icons/Icon_arrow_right.png" alt="">
+        </button>
+      </div>
+    </div>
+    <script type="module" src="../js/enter/main_login.js"></script>
+  </body>
 </html>

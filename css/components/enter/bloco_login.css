@@ -1,0 +1,38 @@
+@import "css/variables.css";
+
+#login-container {
+  background-color: white;
+  padding: 80px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha os elementos à esquerda */
+
+
+}
+#titulo {
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 46px;
+}
+
+#elemento{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 96%;
+}
+.org{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 800vh;
+}
+
+#logoLogin{
+  width: 20%;
+}
