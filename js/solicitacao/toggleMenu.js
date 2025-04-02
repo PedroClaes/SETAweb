@@ -1,8 +1,7 @@
 export function toggleMenu() {
-  const aside = document.getElementById("sideMenu");
+  const headerContent = document.getElementById("user-navigation");
 
-  if (aside) {
-    const isOpen = aside.style.display === "block";
-    aside.style.display = isOpen ? "none" : "block";
+  if (headerContent) {
+    headerContent.classList.toggle("open");
   }
 }

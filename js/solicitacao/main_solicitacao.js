@@ -4,7 +4,8 @@ import { toggleMenu } from '/js/solicitacao/toggleMenu.js';
 document.addEventListener("DOMContentLoaded", () => {
   handleIdentificationSelection();
 
-  const menuToggleButton = document.querySelector(".menuToogle");
+  // Ajuste para a classe correta "menu-toggle"
+  const menuToggleButton = document.querySelector(".menu-toggle");
 
   if (menuToggleButton) {
     menuToggleButton.addEventListener("click", toggleMenu);

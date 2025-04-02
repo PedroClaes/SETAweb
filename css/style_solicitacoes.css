@@ -1,7 +1,7 @@
 @import "components/solicitacoes/modal_solicitacoes.css";
 @import "components/solicitacoes/header_solicitacoes.css";
-@import "components/solicitacoes/aside_solicitacoes.css";
 @import "components/solicitacoes/form_solicitacoes.css";
+@import "components/solicitacoes/textBox_solicitacoes.css";
 @import "/css/variables.css";
 
 /* Reset de estilos para garantir consistência entre os navegadores */
@@ -21,7 +21,6 @@ body {
   background-color: var(--cor-fundo-branco) !important;
   line-height: 1.4;
   scroll-behavior: smooth;
-  overflow-y: hidden;
 }
 
 main {
