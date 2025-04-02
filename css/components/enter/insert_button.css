@@ -1,12 +1,12 @@
-@import "css/variables.css";
+@import "../../variables.css";
 
 .inserir {
   width: 180%;
-  padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-
+  height: 48px;
+  border: 2px solid var(--cor-borda_textBox);
+  border-radius: 6px;
+  padding: 0px 8px;
 }
 
 #emailtxt {

@@ -27,9 +27,9 @@ const login = (email, password) => {
     .then((userCredential) => {
       // Usuário autenticado com sucesso
       const user = userCredential.user;
-      console.log("Usuário logado:", user);
+      alert("Usuário logado:", user);
       // Redirecionamento ou qualquer outra lógica após login bem-sucedido
-      window.location.href = "../index.html"; // Redireciona para a página principal ou outra página após login
+      window.location.href = "../pages/solicitacoes.html"; // Redireciona para a página principal ou outra página após login
     })
     .catch((error) => {
       const errorCode = error.code;
