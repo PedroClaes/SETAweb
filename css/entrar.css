@@ -1,0 +1,16 @@
+@import "components/enter/button_enter.css";
+@import "components/enter/bloco_login.css";
+@import "components/enter/insert_button.css";
+@import "css/variables.css";
+
+
+body{
+  background-color: #007070; /* Verde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+

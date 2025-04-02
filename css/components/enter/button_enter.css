@@ -1,0 +1,36 @@
+@import "css/variables.css";
+
+
+.enterBTN {
+  width: 190%; /* Garante que o botão ocupe 100% da largura do contêiner */
+  height: 48px; /* Altura do botão */
+  background-color:  #007c7c;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Reduzido para evitar um espaçamento excessivo */
+  border-radius: 6px;
+  cursor: pointer;
+  box-sizing: border-box; /* Garante que o padding não afete a largura */
+  min-height: 48px; /* Garante que a altura mínima do botão seja 48px */
+  margin-bottom: 24px;
+  flex-grow: 1; /* Added flex-grow: 1 */
+}
+
+.enterBTN:hover {
+  background-color: #007c7c;
+}
+
+.texto_botao{
+  font-size: 16px;
+  --cor-texto-branco: white; /* Cor do texto branco */
+  white-space: nowrap; /* Impede que o texto quebre dentro do botão */
+  text-align: center; /* Alinha o texto no centro */
+}
+
+p{
+  color: #E4E4E4;
+}
+
+

@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         alert("Usuário cadastrado com sucesso!");
-        window.location.href = "../pages/solicitacoes.html"; // Redirecionando após o cadastro
+        window.location.href = "../pages/login.html"; // Redirecionando após o cadastro
 
       } catch (error) {
         console.error("Erro ao cadastrar usuário: ", error);

@@ -1,0 +1,29 @@
+@import "css/variables.css";
+
+.inserir {
+  width: 180%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+
+}
+
+#emailtxt {
+  margin-bottom: 5px; /* Define um pequeno espaço abaixo do primeiro elemento */
+}
+
+#inemailtxt {
+  margin-top: 0; /* Remove o espaçamento extra na parte superior */
+
+}
+
+#senhatxt {
+  margin-bottom: 5px; /* Define um pequeno espaço abaixo do primeiro elemento */
+}
+
+#insenhatxt {
+  margin-top: 0; /* Remove o espaçamento extra na parte superior */
+
+}
+
