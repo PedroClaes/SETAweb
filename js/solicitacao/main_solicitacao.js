@@ -11,4 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuToggleButton) {
     menuToggleButton.addEventListener("click", toggleMenu);
   }
+
+  document.getElementById("limparCampos").addEventListener("click", function () {
+    document.getElementById("traceabilityForm").reset();
+  });
 });
