@@ -74,7 +74,7 @@
           </div>
           <div class="inputIdentificationGroup hidden" id="snGroup">
             <label for="sn" class="open-sans-semibold">SN:</label>
-            <input type="text" id="sn" name="sn" placeholder="SN:" class="open-sans-semibold">
+            <input type="text" id="sn" name="sn" placeholder="SN:" class="open-sans-semibold" >
           </div>
           <div class="inputIdentificationGroup hidden" id="ordenGroup">
             <label for="orden" class="open-sans-semibold">ORDEN:</label>
@@ -182,49 +182,77 @@
           <input type="checkbox" id="relatorio_ultrassom_checkbox" name="tipos_ensaios">
         </div>
       </div>
-    </form>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Imagens e Documentos</h3>
+      <br>
+      <div class="form-group">
+        <input type="file" id="complementaryFiles" multiple>
+        <button type="button" id="addFilesBtn" class="open-sans-semibold">Clique aqui para anexar</button>
+      </div>
 
-  </section>
+      <table id="filesTable">
+        <thead>
+        <tr>
+          <th>Imagem/Documento</th>
+          <th>Tipo do arquivo</th>
+          <th>Download</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os arquivos adicionados aparecerão aqui -->
+        </tbody>
+      </table>
 
-  <section>
-    <h1 class="poppins-bold">Relatorio de dureza</h1>
-    <form id="relatorio_dureza">
+      <br>
+      <div class="actionsSolicitacao">
+        <button type="button"  id="limparCampos" class="open-sans-semibold">Limpar campos</button>
+        <button type="button"  id="sendingSolicitation" class="open-sans-semibold">Enviar Solicitação</button>
+      </div>
 
-    </form>
-
-  </section>
-
-  <section>
-    <h1 class="poppins-bold">Inspeção de visão</h1>
-    <form id="relatorio_vs">
-
-    </form>
-
-  </section>
-
-  <section>
-    <h1 class="poppins-bold">Relatorio PM</h1>
-    <form id="relatorio_pm">
-
-    </form>
-
-  </section>
-
-  <section>
-    <h1 class="poppins-bold">Relatorio Lp</h1>
-    <form id="relatorio_lp">
 
     </form>
 
   </section>
 
-  <section>
-    <h1 class="poppins-bold">Relatorio Ultrassom</h1>
-    <form id="relatorio_ultrassom">
+<!--  <section>-->
+<!--    <h1 class="poppins-bold">Relatorio de dureza</h1>-->
+<!--    <form id="relatorio_dureza">-->
 
-    </form>
+<!--    </form>-->
 
-  </section>
+<!--  </section>-->
+
+<!--  <section>-->
+<!--    <h1 class="poppins-bold">Inspeção de visão</h1>-->
+<!--    <form id="relatorio_vs">-->
+
+<!--    </form>-->
+
+<!--  </section>-->
+
+<!--  <section>-->
+<!--    <h1 class="poppins-bold">Relatorio PM</h1>-->
+<!--    <form id="relatorio_pm">-->
+
+<!--    </form>-->
+
+<!--  </section>-->
+
+<!--  <section>-->
+<!--    <h1 class="poppins-bold">Relatorio Lp</h1>-->
+<!--    <form id="relatorio_lp">-->
+
+<!--    </form>-->
+
+<!--  </section>-->
+
+<!--  <section>-->
+<!--    <h1 class="poppins-bold">Relatorio Ultrassom</h1>-->
+<!--    <form id="relatorio_ultrassom">-->
+
+<!--    </form>-->
+
+<!--  </section>-->
 </main>
 
 <div id="identificationModal" class="modal">
