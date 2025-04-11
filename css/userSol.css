@@ -1,0 +1,23 @@
+@import "components/solicitacoes/modal_solicitacoes.css";
+@import "components/solicitacoes/header_solicitacoes.css";
+@import "components/solicitacoes/form_solicitacoes.css";
+@import "components/solicitacoes/textBox_solicitacoes.css";
+@import "components/solicitacoes/dadospeca.css";
+@import "components/solicitacoes/solicitacoesADM/style_listaSolicitacao.css";
+@import "/css/variables.css";
+
+/* Reset de estilos para garantir consistência entre os navegadores */
+/* Reset de estilos para garantir consistência entre os navegadores */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%; /* Garantir que o html e body ocupem 100% */
+  width: 100%;  /* Garantir que o body ocupe 100% da largura */
+}
+
+
+
