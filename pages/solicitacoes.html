@@ -95,12 +95,12 @@
           <input class="input-form" type="text" id="material" name="material" placeholder="Material">
         </div>
         <div class="form-group">
-          <label class="label-form open-sans-semibold" for="espessura">Espessura</label>
-          <input class="input-form" type="text" id="espessura" name="espessura" placeholder="Espessura">
+          <label class="label-form open-sans-semibold" for="processo_fabricacao">Processo de fabricação</label>
+          <input class="input-form" type="text" id="processo_fabricacao" name="processo_fabricacao" placeholder="Processo de fabricação">
         </div>
         <div class="form-group">
-          <label class="label-form open-sans-semibold" for="diametro">Diâmetro</label>
-          <input class="input-form" type="text" id="diametro" name="diametro" placeholder="Diâmetro">
+          <label class="label-form open-sans-semibold" for="espessura_diametro">Espessura ou Diametro</label>
+          <input class="input-form" type="text" id="espessura_diametro" name="espessura_diametro" placeholder="Espessura ou Diametro">
         </div>
         <div class="form-group">
           <label class="label-form open-sans-semibold" for="comprimento">Comprimento</label>
@@ -119,8 +119,33 @@
           <input class="input-form" type="text" id="quantidade" name="quantidade" placeholder="Quantidade">
         </div>
         <div class="form-group">
-          <label class="label-form open-sans-semibold" for="processo_fabricacao">Processo de Fabricação</label>
-          <input class="input-form" type="text" id="processo_fabricacao" name="processo_fabricacao" placeholder="Processo de Fabricação">
+          <label class="label-form open-sans-semibold" for="fase_inspecao">Fase da inspeção</label>
+          <input class="input-form" type="text" id="fase_inspecao" name="fase_inspecao" placeholder="Fase da inspeção">
+        </div>
+      </div>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Tipos de Ensaios</h3>
+      <br>
+      <div class="form-group-container_checkboxes">
+        <div class="form-group_checkboxes">
+          <label class="label-form open-sans-semibold" for="ensaio_dureza_checkbox">Ensaio de Dureza</label>
+          <input type="checkbox" id="ensaio_dureza_checkbox" name="tipos_ensaios">
+        </div>
+        <div class="form-group_checkboxes">
+          <label class="label-form open-sans-semibold" for="inspecao_visual_checkbox">Inspeção Visual</label>
+          <input type="checkbox" id="inspecao_visual_checkbox" name="tipos_ensaios">
+        </div>
+        <div class="form-group_checkboxes">
+          <label class="label-form open-sans-semibold" for="relatorio_lp_checkbox">Relatório LP</label>
+          <input type="checkbox" id="relatorio_lp_checkbox" name="tipos_ensaios">
+        </div>
+        <div class="form-group_checkboxes">
+          <label class="label-form open-sans-semibold" for="relatorio_pm_checkbox">Relatório PM</label>
+          <input type="checkbox" id="relatorio_pm_checkbox" name="tipos_ensaios">
+        </div>
+        <div class="form-group_checkboxes">
+          <label class="label-form open-sans-semibold" for="relatorio_ultrassom_checkbox">Relatório de Ultrassom</label>
+          <input type="checkbox" id="relatorio_ultrassom_checkbox" name="tipos_ensaios">
         </div>
       </div>
       <br>
@@ -157,31 +182,7 @@
         </div>
       </div>
 
-      <br>
-      <h3 class="form-section-title poppins-semibold">Tipos de Ensaios</h3>
-      <br>
-      <div class="form-group-container_checkboxes">
-        <div class="form-group_checkboxes">
-          <label class="label-form open-sans-semibold" for="ensaio_dureza_checkbox">Ensaio de Dureza</label>
-          <input type="checkbox" id="ensaio_dureza_checkbox" name="tipos_ensaios">
-        </div>
-        <div class="form-group_checkboxes">
-          <label class="label-form open-sans-semibold" for="inspecao_visual_checkbox">Inspeção Visual</label>
-          <input type="checkbox" id="inspecao_visual_checkbox" name="tipos_ensaios">
-        </div>
-        <div class="form-group_checkboxes">
-          <label class="label-form open-sans-semibold" for="relatorio_lp_checkbox">Relatório LP</label>
-          <input type="checkbox" id="relatorio_lp_checkbox" name="tipos_ensaios">
-        </div>
-        <div class="form-group_checkboxes">
-          <label class="label-form open-sans-semibold" for="relatorio_pm_checkbox">Relatório PM</label>
-          <input type="checkbox" id="relatorio_pm_checkbox" name="tipos_ensaios">
-        </div>
-        <div class="form-group_checkboxes">
-          <label class="label-form open-sans-semibold" for="relatorio_ultrassom_checkbox">Relatório de Ultrassom</label>
-          <input type="checkbox" id="relatorio_ultrassom_checkbox" name="tipos_ensaios">
-        </div>
-      </div>
+
       <br>
       <h3 class="form-section-title poppins-semibold">Imagens e Documentos</h3>
       <br>
@@ -214,13 +215,15 @@
 
   </section>
 
-<!--  <section>-->
-<!--    <h1 class="poppins-bold">Relatorio de dureza</h1>-->
-<!--    <form id="relatorio_dureza">-->
+  <section>
+    <h1 class="poppins-bold">Relatorio de dureza</h1>
+    <form id="relatorio_dureza">
+      <fieldset class="">
 
-<!--    </form>-->
+      </fieldset>
+    </form>
 
-<!--  </section>-->
+  </section>
 
 <!--  <section>-->
 <!--    <h1 class="poppins-bold">Inspeção de visão</h1>-->

@@ -1,6 +1,7 @@
 import { handleIdentificationSelection } from '/js/solicitacao/addTextbox.js';
 import { toggleMenu } from '/js/solicitacao/toggleMenu.js';
 import "./addArchives.js"
+import "./sendingSolicitation.js"
 
 document.addEventListener("DOMContentLoaded", () => {
   handleIdentificationSelection();
