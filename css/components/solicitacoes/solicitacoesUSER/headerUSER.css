@@ -80,3 +80,47 @@ header nav button:nth-child(7){
     display: none;
   }
 }
+
+section {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rastreabilidade_fieldset{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: none;
+  gap: 12px;
+}
+
+.camps10{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.formGroup{
+  display: flex;
+  flex-direction: column;
+}
+
+#identifications{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#identifications button{
+  border: none;
+  background-color: var(--cor-secundaria);
+  padding: 16px;
+  color: var(--cor-texto-branco);
+  font-size: 12px;
+  border-radius: 8px;
+}

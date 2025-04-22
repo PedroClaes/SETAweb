@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
-import { getFirestore, collection, query, where, getDocs, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
+import { getFirestore, collection, query, where, getDocs, doc, getDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
 
 // Configuração do Firebase (substitua com as informações do seu projeto)
@@ -171,6 +171,20 @@ async function displayRequests() {
   }
 }
 
+
+window.excluirSolicitacao = async function (id) {
+  const confirmDelete = confirm("Tem certeza que deseja excluir esta solicitação?");
+  if (!confirmDelete) return;
+
+  try {
+    await deleteDoc(doc(db, "Solicitacoes", id));
+    alert("Solicitação excluída com sucesso!");
+    displayRequests(); // recarrega as solicitações
+  } catch (error) {
+    console.error("Erro ao excluir solicitação:", error);
+    alert("Erro ao excluir a solicitação.");
+  }
+};
 
 // Chama a função para exibir as solicitações na página ao carregar
 window.onload = displayRequests;

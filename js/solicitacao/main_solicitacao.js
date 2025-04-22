@@ -19,3 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
   handleIdentificationSelection();
   displayRequests(); // <- chama aqui para mostrar as solicitações
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("btnMinhasSolicitacoes");
+
+  if (btn) {
+    btn.addEventListener("click", () => {
+      window.location.href = "../pages/minhas-solicitacoes.html"; // ajuste o caminho conforme sua estrutura
+    });
+  }
+});
