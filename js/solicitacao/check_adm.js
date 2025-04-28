@@ -68,28 +68,28 @@ async function getRequests() {
 }
 
 
-function hideAllExceptSolicitacoesContainer() {
-  const allElements = document.body.children;
+//function hideAllExceptSolicitacoesContainer() {
+  //const allElements = document.body.children;
 
-  for (let el of allElements) {
+  //for (let el of allElements) {
     // Se não for o container nem o header, esconde
-    if (el.id !== "SolicitacoesContainer" && el.tagName.toLowerCase() !== "header") {
-      el.style.display = "none";
-    }
-  }
+    //if (el.id !== "SolicitacoesContainer" && el.tagName.toLowerCase() !== "header" ) {
+      //el.style.display = "none";
+    //}
+  //}
 
   // Exibe novamente o container, deixando o CSS decidir o estilo
-  const solicitacoes = document.getElementById("SolicitacoesContainer");
-  if (solicitacoes) {
-    solicitacoes.style.display = ""; // Reseta para o valor do CSS
-  }
+  //const solicitacoes = document.getElementById("SolicitacoesContainer");
+  //if (solicitacoes) {
+    //solicitacoes.style.display = ""; // Reseta para o valor do CSS
+  //}
 
   // Exibe novamente o header com estilo original
-  const header = document.querySelector("header") || document.getElementById("header");
-  if (header) {
-    header.style.display = ""; // Remove display inline para manter o estilo do CSS
-  }
-}
+  //const header = document.querySelector("header") || document.getElementById("header");
+  //if (header) {
+    //header.style.display = ""; // Remove display inline para manter o estilo do CSS
+  //}
+//}
 
 
 // Função para exibir as solicitações na interface HTML
@@ -101,17 +101,12 @@ async function displayRequests() {
   }
 
   try {
-    const { isAdmin, solicitacoes } = await getRequests();
+    const { solicitacoes } = await getRequests();
 
     // Se for admin, esconde tudo exceto o container
-    if (isAdmin) {
-      hideAllExceptSolicitacoesContainer();
-    }
-
-    if (!solicitacoes || solicitacoes.length === 0) {
-      SolicitacoesContainer.innerHTML = "<p>Nenhuma solicitação encontrada.</p>";
-      return;
-    }
+    //if (isAdmin) {
+      //hideAllExceptSolicitacoesContainer();
+    //}
 
     SolicitacoesContainer.innerHTML = solicitacoes.map(request => {
       const dataSolicitacao = request.data?.toDate?.(); // Converte a data
@@ -145,8 +140,9 @@ async function displayRequests() {
         .join(", ");
 
       return `
-    <div class="request-item">
-    <h3>${request.id}</h3>
+
+    <div class="request-item" data-id_solicitacao="${request.id_solicitacao}">
+    <h3>${request.id_solicitacao}</h3>
     <p>${ensaiosAtivos || "Nenhum"}</p>
     <p>${dataFormatada}</p>
     <p><span class="status-badge ${statusClass}">${request.status}</span></p>
@@ -172,6 +168,7 @@ async function displayRequests() {
 }
 
 
+
 window.excluirSolicitacao = async function (id) {
   const confirmDelete = confirm("Tem certeza que deseja excluir esta solicitação?");
   if (!confirmDelete) return;
@@ -186,8 +183,9 @@ window.excluirSolicitacao = async function (id) {
   }
 };
 
-// Chama a função para exibir as solicitações na página ao carregar
-window.onload = displayRequests;
+
+// Depois que montar o HTML normalmente
+window.solicitacoesExibidas = Array.from(document.querySelectorAll(".request-item"));
 
 export { displayRequests };
 

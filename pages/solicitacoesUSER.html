@@ -22,12 +22,57 @@
                                                                                    alt="Ícone de seta"></button>
     </nav>
   </header>
+  <h1 id="title">Solicitações</h1>
+  <div class="header">
+    <!-- Campo de pesquisa -->
+    <div class="search-container" style="margin-bottom: 20px;">
+      <input type="text" id="searchInput" placeholder="Pesquisar por ID da solicitação"/>
+    </div>
+
+    <p id="no_result" style="display: none; color: red;">Nenhuma solicitação encontrada.</p>
 
 
-  <div id="SolicitacoesContainer" style="cursor: pointer;"></div>
+    <div id="resultado"></div>
 
 
-  <script type="module" src="../js/solicitacao/userS.js"></script>
+    <!-- Botões de ação -->
+    <div class="filtro-container">
+      <button class="filtro-btn" id="toggleFiltro">Filtrar</button>
+      <div class="painel-filtro" id="painelFiltro">
+        <section>
+          <strong>Tipo Inspeção:</strong>
+          <label><input type="checkbox" id="filtroVizual"> Inspeção Visual</label>
+          <label><input type="checkbox" id="filtroDureza"> Dureza</label>
+          <label><input type="checkbox" id="filtroLP"> LP</label>
+          <label><input type="checkbox" id="filtroPM"> PM</label>
+          <label><input type="checkbox" id="filtroUltrassom"> Ultrassom</label>
+        </section>
+
+        <section>
+          <strong>Data:</strong>
+          <label><input type="radio" name="filtroData" value="crescente" id="dataCrescente"> Crescente</label>
+          <label><input type="radio" name="filtroData" value="decrescente" id="dataDecrescente"> Decrescente</label>
+        </section>
+
+        <section>
+          <strong>Status:</strong>
+          <label><input type="checkbox" id="filtroConcluido"> Concluído</label>
+          <label><input type="checkbox" id="filtroPendente"> Pendente</label>
+          <label><input type="checkbox" id="filtroCancelado"> Cancelado</label>
+        </section>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <div id="SolicitacoesContainer" style="cursor: pointer;" ></div>
+
+
+
+
+  <script type="module" src="../js/solicitacao/mainSUser.js"></script>
   </body>
 </html>
 

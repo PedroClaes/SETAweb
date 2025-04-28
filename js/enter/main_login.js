@@ -31,7 +31,7 @@ const login = (email, password) => {
       alert("Usuário logado:", user);
       const currentUser = parseInt(Math. random() * 3) + 1;
       // Redirecionamento ou qualquer outra lógica após login bem-sucedido
-      window.location.href = "../pages/solicitacoes.html"; // Redireciona para a página principal ou outra página após login
+      window.location.href = "../pages/solicitacoesUSER.html"; // Redireciona para a página principal ou outra página após login
     })
     .catch((error) => {
       const errorCode = error.code;

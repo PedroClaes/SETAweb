@@ -2,6 +2,7 @@
 @import "components/solicitacoes/solicitacoesUSER/headerUSER.css";
 @import "components/solicitacoes/solicitacoesUSER/itensSOL.css";
 @import "/css/variables.css";
+@import "components/solicitacoes/solicitacoesADM/style_listaSolicitacao.css";
 
 /* Reset de estilos para garantir consistência entre os navegadores */
 /* Reset de estilos para garantir consistência entre os navegadores */

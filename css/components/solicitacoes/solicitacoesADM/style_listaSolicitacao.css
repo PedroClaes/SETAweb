@@ -69,3 +69,42 @@
   background-color: #7f1d1d;
 }
 
+
+#title{
+  margin-left: 50px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.search-container {
+  display: flex;
+  flex: 1;
+  max-width: 800px;
+  margin: 10px 20px;
+}
+
+
+
+.search-container input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://img.icons8.com/ios-filled/50/search--v1.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 12px center;
+}
