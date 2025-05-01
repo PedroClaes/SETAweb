@@ -38,7 +38,7 @@ async function getRequests() {
             return;
           }
 
-          const isAdmin = userSnap.data().admin; // Corrigido aqui também: `admin`, não `isAdmin`
+          const isAdmin = userSnap.data().admin; // Corrigido aqui também: admin, não isAdmin
           let q;
 
           if (isAdmin) {
@@ -68,51 +68,23 @@ async function getRequests() {
 }
 
 
-//function hideAllExceptSolicitacoesContainer() {
-  //const allElements = document.body.children;
-
-  //for (let el of allElements) {
-    // Se não for o container nem o header, esconde
-    //if (el.id !== "SolicitacoesContainer" && el.tagName.toLowerCase() !== "header" ) {
-      //el.style.display = "none";
-    //}
-  //}
-
-  // Exibe novamente o container, deixando o CSS decidir o estilo
-  //const solicitacoes = document.getElementById("SolicitacoesContainer");
-  //if (solicitacoes) {
-    //solicitacoes.style.display = ""; // Reseta para o valor do CSS
-  //}
-
-  // Exibe novamente o header com estilo original
-  //const header = document.querySelector("header") || document.getElementById("header");
-  //if (header) {
-    //header.style.display = ""; // Remove display inline para manter o estilo do CSS
-  //}
-//}
-
-
-// Função para exibir as solicitações na interface HTML
 async function displayRequests() {
   const SolicitacoesContainer = document.getElementById("SolicitacoesContainer");
   if (!SolicitacoesContainer) {
     console.error("Elemento SolicitacoesContainer não encontrado no HTML");
-    return;
+    return [];
   }
 
   try {
     const { solicitacoes } = await getRequests();
-
-    // Se for admin, esconde tudo exceto o container
-    //if (isAdmin) {
-      //hideAllExceptSolicitacoesContainer();
-    //}
 
     SolicitacoesContainer.innerHTML = solicitacoes.map(request => {
       const dataSolicitacao = request.data?.toDate?.(); // Converte a data
       const dataFormatada = dataSolicitacao
         ? dataSolicitacao.toLocaleDateString("pt-BR")
         : "Sem data";
+        const timestamp = dataSolicitacao ? dataSolicitacao.getTime() : 0;
+
 
       // Define a cor de acordo com o status
       let statusClass = "";
@@ -134,26 +106,31 @@ async function displayRequests() {
 
 
       // Filtra os tipos de ensaio com valor true
-      const ensaiosAtivos = Object.entries(request.tipo_ensaio || {})
+      const ensaiosAtivos = Object.entries(request.tipos_ensaios || {})
         .filter(([_, valor]) => valor === true)
         .map(([chave]) => chave)
-        .join(", ");
+        .join("|");
 
-      return `
+      return `<div class="request-item"
+             data-id_solicitacao="${request.id_solicitacao}"
+             data-tipo_inspecao="${ensaiosAtivos.toLowerCase()}"
+             data-status="${(request.status || '').toLowerCase()}"
+             data-timestamp="${timestamp}">
+                <h3>${request.id_solicitacao}</h3>
+                <p style ="display: none" id="id_daS">${request.id}</p>
+                <p>${ensaiosAtivos || "Nenhum"}</p>
+                <p>${dataFormatada}</p>
+                <p><span class="status-badge ${statusClass}">${request.status}</span></p>
+                <button class="delete-btn" data-id="${request.id}">Excluir</button>
+            </div>`;
 
-    <div class="request-item" data-id_solicitacao="${request.id_solicitacao}">
-    <h3>${request.id_solicitacao}</h3>
-    <p>${ensaiosAtivos || "Nenhum"}</p>
-    <p>${dataFormatada}</p>
-    <p><span class="status-badge ${statusClass}">${request.status}</span></p>
-    <button class="delete-btn" data-id="${request.id}">Excluir</button>
 
-
-  </div>
-  `;
     }).join("");
 
 
+
+
+    //botão delete
     document.querySelectorAll(".delete-btn").forEach(button => {
       button.addEventListener("click", () => {
         const id = button.getAttribute("data-id");
@@ -161,13 +138,14 @@ async function displayRequests() {
       });
     });
 
-
+    return solicitacoes;
   } catch (error) {
     console.error("Erro ao exibir solicitações:", error);
+    return [];
   }
 }
 
-
+// Função para exibir as solicitações na interface HTML
 
 window.excluirSolicitacao = async function (id) {
   const confirmDelete = confirm("Tem certeza que deseja excluir esta solicitação?");
@@ -183,9 +161,9 @@ window.excluirSolicitacao = async function (id) {
   }
 };
 
-
 // Depois que montar o HTML normalmente
-window.solicitacoesExibidas = Array.from(document.querySelectorAll(".request-item"));
+
+window.originalRequestItems = Array.from(document.querySelectorAll(".request-item"));
+
 
 export { displayRequests };
-

@@ -81,13 +81,29 @@
 }
 
 .filtro-btn {
-  padding: 10px 15px;
-  background-color: #3498db;
+  background-color: var(--cor-primaria);
   color: white;
+  font-weight: 600;
+  padding: 10px 20px;
   border: none;
   border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   cursor: pointer;
+  font-size: 16px;
 }
+
+.filtro-btn:hover {
+  background-color: var(--cor-primaria);
+}
+
+/* Ícone (você pode usar Font Awesome ou um SVG inline) */
+.filtro-btn .icon {
+  display: inline-flex;
+  align-items: center;
+}
+
 
 .painel-filtro {
   display: none;
@@ -101,3 +117,5 @@
   z-index: 100;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+
