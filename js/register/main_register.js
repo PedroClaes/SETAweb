@@ -2,7 +2,8 @@ import { applyCPFCNPJMask } from "./masks.js";
 import { validateForm } from "./validation.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc, setDoc, doc } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
+
 
 const cpfCnpjInput = document.getElementById("cpf_cnpj");
 const nameInput = document.getElementById("nome_completo");
@@ -41,13 +42,11 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Usuário autenticado com sucesso: ", user);
 
         // Adicionando os dados do usuário ao Firestore
-        await addDoc(collection(db, "Usuarios"), {
-          uid: user.uid, // Salvando o UID do Firebase Auth para referência
+        await setDoc(doc(db, "Usuarios", user.uid), {
           cpf_cnpj: cpfCnpjInput.value,
           admin: false,
           codigo_inspetor: null,
           email: emailInput.value,
-          id_solicitacoes: {},
           nome_completo: nameInput.value
         });
 

@@ -1,7 +1,11 @@
+
 import { handleIdentificationSelection } from '/js/solicitacao/addTextbox.js';
 import { toggleMenu } from '/js/solicitacao/toggleMenu.js';
 import "./addArchives.js"
 import "./sendingSolicitation.js"
+import "../relatorios/dureza_relatorio/add_register_dureza.js"
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   handleIdentificationSelection();

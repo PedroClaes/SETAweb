@@ -1,6 +1,6 @@
 const fileInput = document.getElementById('complementaryFiles');
 const addFilesBtn = document.getElementById('addFilesBtn');
-const filesTableBody = document.querySelector('#filesTable tbody');
+const filesTableBody = document.querySelector('#tabelaArquvos tbody');
 
 addFilesBtn.addEventListener('click', () => {
   fileInput.click(); // Abre o seletor de arquivos

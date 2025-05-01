@@ -13,7 +13,7 @@
   background-color: var(--cor-tercearia);
 }
 
-#filesTable {
+.filesTable {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
@@ -21,22 +21,22 @@
   font-size: 14px;
 }
 
-#filesTable thead {
+.filesTable thead {
   background-color: var(--cor-texto-branco);
 }
 
-#filesTable th,
-#filesTable td {
+.filesTable th,
+.filesTable td {
   border: 1px solid #ddd;
   padding: 10px 12px;
   text-align: left;
 }
 
-#filesTable tr:nth-child(even) {
+.filesTable tr:nth-child(even) {
   background-color: #fafafa;
 }
 
-#filesTable tr:hover {
+.filesTable tr:hover {
   background-color: #f0f8ff;
 }
 

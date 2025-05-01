@@ -6,6 +6,7 @@
 @import "components/solicitacoes/doc_table_solicitacoes.css";
 @import "components/solicitacoes/actions_solicitacoes.css";
 @import "/css/variables.css";
+@import "components/solicitacoes/observacao_input.css";
 
 /* Reset de estilos para garantir consistência entre os navegadores */
 /* Reset de estilos para garantir consistência entre os navegadores */

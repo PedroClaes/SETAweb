@@ -12,7 +12,6 @@
   <button class="menu-toggle">&#9776;</button>
   <img src="../assets/visual_identity/Logo_fundo_SETA.jpg" alt="Logotipo SETA" width="100px" height="50px">
   <nav class="user-navigation" id="user-navigation">
-    <h2 class="user-name"></h2>
     <button id="navSolic" class="open-sans-semibold">Solicitações</button>
     <button id="navDocs" class="admin-only open-sans-semibold">Documentos</button>
     <button id="navEqup" class="admin-only open-sans-semibold">Equipamentos</button>
@@ -27,6 +26,18 @@
   <section>
     <h1 class="poppins-bold">Solicitar ensaios</h1>
     <form id="traceabilityForm">
+      <h3 class="form-section-title poppins-semibold">Informações Essenciais</h3>
+      <div class="form-group-container">
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="cliente_final">Cliente Final</label>
+          <input class="input-form" type="text" id="cliente_final" name="cliente_final" placeholder="Cliente Final">
+        </div>
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="local">Local</label>
+          <input class="input-form" type="text" id="local" name="local" placeholder="Local">
+        </div>
+      </div>
+      <br>
       <h3 class="form-section-title poppins-semibold">Rastreabilidade</h3>
       <br>
       <fieldset class="rastreabilidade_fieldset">
@@ -170,20 +181,6 @@
       </div>
 
       <br>
-      <h3 class="form-section-title poppins-semibold">Informações Essenciais</h3>
-      <div class="form-group-container">
-        <div class="form-group">
-          <label class="label-form open-sans-semibold" for="cliente_final">Cliente Final</label>
-          <input class="input-form" type="text" id="cliente_final" name="cliente_final" placeholder="Cliente Final">
-        </div>
-        <div class="form-group">
-          <label class="label-form open-sans-semibold" for="local">Local</label>
-          <input class="input-form" type="text" id="local" name="local" placeholder="Local">
-        </div>
-      </div>
-
-
-      <br>
       <h3 class="form-section-title poppins-semibold">Imagens e Documentos</h3>
       <br>
       <div class="form-group">
@@ -191,7 +188,7 @@
         <button type="button" id="addFilesBtn" class="open-sans-semibold">Clique aqui para anexar</button>
       </div>
 
-      <table id="filesTable">
+      <table id="tabelaArquvos" class="filesTable">
         <thead>
         <tr>
           <th>Imagem/Documento</th>
@@ -215,47 +212,1002 @@
 
   </section>
 
+
+
   <section>
     <h1 class="poppins-bold">Relatorio de dureza</h1>
     <form id="relatorio_dureza">
-      <fieldset class="">
+      <h3 class="form-section-title poppins-semibold">Dados da Inspeção</h3>
+      <div class="form-group-container">
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="carga">Carga</label>
+          <input class="input-form" type="text" id="carga" name="carga" placeholder="Carga">
+        </div>
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="tempo">Tempo</label>
+          <input class="input-form" type="text" id="tempo" name="tempo" placeholder="Tempo">
+        </div>
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="sonda_penetrador">Sonda/Penetrador</label>
+          <input class="input-form" type="text" id="sonda_penetrador" name="sonda_penetrador" placeholder="Sonda/Penetrador">
+        </div>
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="temperatura">Temperatura</label>
+          <input class="input-form" type="text" id="temperatura" name="temperatura" placeholder="Temperatura">
+        </div>
+      </div>
+      <br>
 
-      </fieldset>
+      <h3 class="form-section-title poppins-semibold">Método</h3>
+      <br>
+      <div class="form-group-container_checkboxes">
+        <div class="form-group_checkboxes">
+          <input type="checkbox" id="metodo_hrb" name="metodo" value="HRB"> HRB
+          <input type="checkbox" id="metodo_hrc" name="metodo" value="HRC"> HRC
+          <input type="checkbox" id="metodo_hbw" name="metodo" value="HBW"> HBW
+          <input type="checkbox" id="metodo_hrv" name="metodo" value="HRV"> HRV
+          <input type="checkbox" id="metodo_leeb" name="metodo" value="LEEB"> LEEB
+          <input type="checkbox" id="metodo_uci" name="metodo" value="UCI"> UCI
+        </div>
+      </div>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Identificação e Certificados</h3>
+      <div class="form-group-container">
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="n_serie">N° Série</label>
+          <input class="input-form" type="text" id="n_serie" name="n_serie" placeholder="N° Série">
+        </div>
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="certificado">Certificado</label>
+          <input class="input-form" type="text" id="certificado" name="certificado" placeholder="Certificado">
+        </div>
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="validade">Validade</label>
+          <input class="input-form" type="text" id="validade" name="validade" placeholder="Validade">
+        </div>
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="id">ID</label>
+          <input class="input-form" type="text" id="id" name="id" placeholder="ID">
+        </div>
+      </div>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Dados de equipamento e acessórios</h3>
+      <div class="form-group-container">
+        <button id="addEquipamentoDureza" class="addEquipButton">Adicionar equipamento</button>
+        <table id="equipamentoTableDureza" class="filesTable">
+          <thead>
+          <tr>
+            <th>Equipamento</th>
+            <th>N° Serie</th>
+            <th>Certificado</th>
+            <th>Validade</th>
+            <th>ID</th>
+            <th>Ações</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- Os arquivos adicionados aparecerão aqui -->
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Registros</h3>
+
+
+
+
+
+
+      <!-- AQUI EU QUERO QUE O USUARIO COLOQUE OS DADOS NOS INPUTS TEXT E ASSIM INSIRA OS DADOS NA TABELA APENAS OS DADSO QUE FORAM INSERIDOS NOS INPUTS -->
+
+
+
+
+
+
+
+      <div class="form-group-container">
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="identificacao_numero">Identificação N°</label>
+          <input class="input-form" type="text" id="identificacao_numero" placeholder="Identificação N°">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="valor_dureza">Valor da Dureza</label>
+          <input class="input-form" type="text" id="valor_dureza" placeholder="Valor da Dureza">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="media">Média</label>
+          <input class="input-form" type="text" id="media" placeholder="Média">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="observacao">Observação</label>
+          <input class="input-form" type="text" id="observacao" placeholder="Observação">
+        </div>
+
+      </div>
+
+      <!-- Botão de Adicionar -->
+      <button type="button" id="adicionarRegistroBtn">Adicionar Registro</button>
+
+      <br><br>
+
+      <!-- Tabela dos Registros -->
+      <table id="tabelaRegistrosDureza" class="filesTable">
+        <thead>
+        <tr>
+          <th>Identificação N°</th>
+          <th>Valor da Dureza</th>
+          <th>Média</th>
+          <th>Observação</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os registros aparecerão aqui -->
+        </tbody>
+      </table>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Responsáveis</h3>
+      <div class="form-group-container">
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="inspetor">Inspetor</label>
+          <input class="input-form" type="text" id="inspetor" name="inspetor" placeholder="Inspetor">
+        </div>
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="supervisao">Supervisão/Fornecedor</label>
+          <input class="input-form" type="text" id="supervisao" name="supervisao" placeholder="Supervisão/Fornecedor">
+        </div>
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="cliente_resp">Cliente</label>
+          <input class="input-form" type="text" id="cliente_resp" name="cliente_resp" placeholder="Cliente">
+        </div>
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="data">Data</label>
+          <input class="input-form" type="date" id="data" name="data">
+        </div>
+      </div>
+
+      <br>
+      <button id="insertGraphicRegister">Inserir registro grafico</button>
+      <br>
+      <br>
+
+
+
+      <h3 class="form-section-title poppins-semibold">Status da Inspeção</h3>
+      <br>
+      <div class="form-group-container-status">
+        <button type="button" class="open-sans-semibold" id="aprovadoBtnDureza">Aprovado</button>
+        <button type="button" class="open-sans-semibold" id="reprovadoBtnDureza">Reprovado</button>
+        <button type="button" class="open-sans-semibold" id="informativoBtnDureza">Informativo</button>
+        <button type="button" class="open-sans-semibold" id="ensaioComplementarBtnDureza">Ensaio Complementar</button>
+      </div>
+
     </form>
 
   </section>
 
-<!--  <section>-->
-<!--    <h1 class="poppins-bold">Inspeção de visão</h1>-->
-<!--    <form id="relatorio_vs">-->
 
-<!--    </form>-->
 
-<!--  </section>-->
+  <section>
+    <h1 class="poppins-bold">Inspeção Visual</h1>
+    <form id="relatorio_vs">
+      <h3 class="form-section-title poppins-semibold">Dados da Inspeção</h3>
+      <div class="form-group-container">
 
-<!--  <section>-->
-<!--    <h1 class="poppins-bold">Relatorio PM</h1>-->
-<!--    <form id="relatorio_pm">-->
+        <!-- Técnica de Ensaio -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Técnica de Ensaio</label>
+          <div>
+            <label><input type="checkbox" name="tec_ensaio" value="Direto"> DIRETO</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="tec_ensaio" value="Remoto"> REMOTO</label>
+          </div>
+        </div>
 
-<!--    </form>-->
+        <!-- Tratamento Térmico -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Tratamento Térmico</label>
+          <div>
+            <label><input type="checkbox" name="tratamento_termico" value="Com"> COM</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="tratamento_termico" value="Sem"> SEM</label>
+          </div>
+        </div>
 
-<!--  </section>-->
+        <!-- Tipo de Inspeção -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Tipo de Inspeção</label>
+          <div>
+            <label><input type="checkbox" name="tipo_inspecao" value="Fabricacao"> Fabricação</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="tipo_inspecao" value="Servico"> Serviço</label>
+          </div>
+        </div>
 
-<!--  <section>-->
-<!--    <h1 class="poppins-bold">Relatorio Lp</h1>-->
-<!--    <form id="relatorio_lp">-->
+        <!-- Luminosidade -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="luminosidade">Luminosidade</label>
+          <input class="input-form" type="text" id="luminosidade" name="luminosidade" placeholder="Luminosidade">
+        </div>
 
-<!--    </form>-->
+      </div>
+      <br>
 
-<!--  </section>-->
+      <h3 class="form-section-title poppins-semibold">Equipamentos e Acessórios</h3>
+      <br>
+      <button id="addEquipamentoVisual" class="addEquipButton">Adicionar equipamento</button>
+      <table id="equipamentoTableVisual" class="filesTable">
+        <thead>
+        <tr>
+          <th>Nome do Equipamento</th>
+          <th>Código do Equipamento</th>
+          <th>ID do Equipamento</th>
+          <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os equipamentos adicionados aparecerão aqui -->
+        </tbody>
+      </table>
 
-<!--  <section>-->
-<!--    <h1 class="poppins-bold">Relatorio Ultrassom</h1>-->
-<!--    <form id="relatorio_ultrassom">-->
+      <h3 class="form-section-title poppins-semibold">Registros</h3>
 
-<!--    </form>-->
 
-<!--  </section>-->
+      <!-- AQUI EU QUERO QUE O USUARIO COLOQUE OS DADOS NOS INPUTS TEXT E ASSIM INSIRA OS DADOS NA TABELA APENAS OS DADSO QUE FORAM INSERIDOS NOS INPUTS -->
+
+
+
+      <!-- Formulário de Inputs -->
+      <div class="form-group-container">
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="numero_vs">N°</label>
+          <input class="input-form" type="text" id="numero_vs" placeholder="N°">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="numero_peca_vs">N° da Peça</label>
+          <input class="input-form" type="text" id="numero_peca_vs" placeholder="N° da Peça">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="descontinuidade_vs">Descontinuidade</label>
+          <input class="input-form" type="text" id="descontinuidade_vs" placeholder="Descontinuidade">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="localizacao_vs">Localização</label>
+          <input class="input-form" type="text" id="localizacao_vs" placeholder="Localização">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="comprimento_vs">Comprimento</label>
+          <input class="input-form" type="text" id="comprimento_vs" placeholder="Comprimento">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="laudo_vs">Laudo</label>
+          <input class="input-form" type="text" id="laudo_vs" placeholder="Laudo">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="observacao_vs">Observação</label>
+          <input class="input-form" type="text" id="observacao_vs" placeholder="Observação">
+        </div>
+
+      </div>
+      <br>
+      <!-- Botão de Adicionar -->
+      <button type="button" id="adicionarRegistroBtnVs">Adicionar Registro</button>
+
+      <br><br>
+
+      <!-- Tabela dos Registros -->
+      <table id="tabelaRegistrosVs" class="filesTable">
+        <thead>
+        <tr>
+          <th>N°</th>
+          <th>N° da Peça</th>
+          <th>Descontinuidade</th>
+          <th>Localização</th>
+          <th>Comprimento</th>
+          <th>Laudo</th>
+          <th>Observação</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os registros aparecerão aqui -->
+        </tbody>
+      </table>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Observações</h3>
+      <label for="observacao_input_vs" class="open-sans-regular">Insira aqui a sua observação</label>
+      <textarea name="observacao_input" id="observacao_input_vs" class="input-form input-grande" placeholder="Insira suas observações"></textarea>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Status da Inspeção</h3>
+      <br>
+      <div class="form-group-container-status">
+        <button type="button" class="open-sans-semibold" id="aprovadoBtnVs">Aprovado</button>
+        <button type="button" class="open-sans-semibold" id="reprovadoBtnVs">Reprovado</button>
+        <button type="button" class="open-sans-semibold" id="informativoBtnVs">Informativo</button>
+        <button type="button" class="open-sans-semibold" id="ensaioComplementarBtnVs">Ensaio Complementar</button>
+      </div>
+    </form>
+
+  </section>
+
+
+
+  <section>
+    <h1 class="poppins-bold">RELATÓRIO DE ENSAIO POR LÍQUIDO PENETRANTE</h1>
+    <form id="relatorio_lp">
+      <h3 class="form-section-title poppins-semibold">Dados da Inspeção</h3>
+      <div class="form-group-container">
+
+        <!-- Método -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Método</label>
+          <div>
+            <label><input type="checkbox" name="metodo_lp" value="Colorido"> Colorido</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="metodo_lp" value="Fluorescente"> Fluorescente</label>
+          </div>
+        </div>
+
+        <!-- Técnica de Remoção -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Técnica de Remoção</label>
+          <div>
+            <label><input type="checkbox" name="tecnica_remocao_lp" value="Agua"> Água</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="tecnica_remocao_lp" value="Solvente"> Solvente</label>
+          </div>
+        </div>
+
+        <!-- Intensidade de Luz Visível -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="intensidade_luz_visivel_lp">Intensidade de Luz Visível</label>
+          <input class="input-form" type="text" id="intensidade_luz_visivel_lp" name="intensidade_luz_visivel_lp" placeholder="Intensidade de Luz Visível">
+        </div>
+
+        <!-- Intensidade de Luz UV -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="intensidade_luz_uv_lp">Intensidade de Luz UV</label>
+          <input class="input-form" type="text" id="intensidade_luz_uv_lp" name="intensidade_luz_uv_lp" placeholder="Intensidade de Luz UV">
+        </div>
+
+        <!-- Tempo de Penetração -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="tempo_penetracao_lp">Tempo de Penetração</label>
+          <input class="input-form" type="text" id="tempo_penetracao_lp" name="tempo_penetracao_lp" placeholder="Tempo de Penetração">
+        </div>
+
+        <!-- Tempo de Secagem -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="tempo_secagem_lp">Tempo de Secagem</label>
+          <input class="input-form" type="text" id="tempo_secagem_lp" name="tempo_secagem_lp" placeholder="Tempo de Secagem">
+        </div>
+
+        <!-- Tempo de Revelação -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="tempo_revelacao_lp">Tempo de Revelação</label>
+          <input class="input-form" type="text" id="tempo_revelacao_lp" name="tempo_revelacao_lp" placeholder="Tempo de Revelação">
+        </div>
+
+        <!-- Temperatura -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="temperatura_lp">Temperatura</label>
+          <input class="input-form" type="text" id="temperatura_lp" name="temperatura_lp" placeholder="Temperatura">
+        </div>
+
+      </div>
+      <br>
+
+      <br>
+      <h3 class="form-section-title poppins-semibold">Equipamentos e Acessórios</h3>
+      <br>
+      <button id="addEquipamentoLp" class="addEquipButton">Adicionar equipamento</button>
+      <table id="equipamentoTableLp" class="filesTable">
+        <thead>
+        <tr>
+          <th>Nome do Equipamento</th>
+          <th>Código do Equipamento</th>
+          <th>ID do Equipamento</th>
+          <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os equipamentos adicionados aparecerão aqui -->
+        </tbody>
+      </table>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Produtos</h3>
+      <br>
+      <button id="addProdutoLp" class="addEquipButton">Adicionar Produto</button>
+      <table id="produtoTableLp" class="filesTable">
+        <thead>
+        <tr>
+          <th>Categoria do produto</th>
+          <th>Codigo do produto</th>
+          <th>Fabricante do produto</th>
+          <th>Lote do produto</th>
+          <th>Validade do produto</th>
+          <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os equipamentos adicionados aparecerão aqui -->
+        </tbody>
+      </table>
+
+      <br>
+      <h3 class="form-section-title poppins-semibold">Observações</h3>
+      <label for="observacao_input_lp" class="open-sans-regular">Insira aqui a sua observação</label>
+      <textarea name="observacao_input_lp" id="observacao_input_lp" class="input-form input-grande" placeholder="Insira suas observações"></textarea>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Status da Inspeção</h3>
+      <br>
+      <div class="form-group-container-status">
+        <button type="button" class="open-sans-semibold" id="aprovadoBtnLp">Aprovado</button>
+        <button type="button" class="open-sans-semibold" id="reprovadoBtnLp">Reprovado</button>
+        <button type="button" class="open-sans-semibold" id="informativoBtnLp">Informativo</button>
+        <button type="button" class="open-sans-semibold" id="ensaioComplementarBtnLp">Ensaio Complementar</button>
+      </div>
+    </form>
+
+  </section>
+
+  <section>
+    <h1 class="poppins-bold">RELATÓRIO DE ENSAIO POR PARTICULAS MAGNÉTICAS</h1>
+    <form id="relatorio_pm">
+      <h3 class="form-section-title poppins-semibold">Dados da Inspeção</h3>
+      <div class="form-group-container">
+
+        <!-- Método de Magnetização -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Método de Magnetização</label>
+          <div>
+            <label><input type="checkbox" name="metodo_magnetizacao_pm" value="YOKE"> YOKE</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="metodo_magnetizacao_pm" value="BOBINA"> BOBINA</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="metodo_magnetizacao_pm" value="CD"> CD</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="metodo_magnetizacao_pm" value="CC"> CC</label>
+          </div>
+        </div>
+
+        <!-- Campo de Magnetização -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Campo de Magnetização</label>
+          <div>
+            <label><input type="checkbox" name="campo_magnetizacao_pm" value="LONGITUDINAL"> LONGITUDINAL</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="campo_magnetizacao_pm" value="CIRCULAR"> CIRCULAR</label>
+          </div>
+        </div>
+
+        <!-- VIA -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">VIA</label>
+          <div>
+            <label><input type="checkbox" name="via_pm" value="SECA"> SECA</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="via_pm" value="UMIDA"> UMIDA</label>
+          </div>
+        </div>
+
+        <!-- Corrente de Magnetização -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Corrente de Magnetização</label>
+          <div>
+            <label><input type="checkbox" name="corrente_magnetizacao_pm" value="ALTERNADA"> ALTERNADA</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="corrente_magnetizacao_pm" value="CONTINUA"> CONTINUA</label>
+          </div>
+        </div>
+
+        <!-- Veículo -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Veículo</label>
+          <div>
+            <label><input type="checkbox" name="veiculo_pm" value="AGUA"> Água</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="veiculo_pm" value="OLEO"> Óleo</label>
+          </div>
+        </div>
+
+        <!-- Técnica de Magnetização -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Técnica de Magnetização</label>
+          <div>
+            <label><input type="checkbox" name="tecnica_magnetizacao_pm" value="RESIDUAL"> RESIDUAL</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="tecnica_magnetizacao_pm" value="CONTINUA"> CONTINUA</label>
+          </div>
+        </div>
+
+        <!-- Visualização -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold">Visualização</label>
+          <div>
+            <label><input type="checkbox" name="visualizacao_pm" value="COLORIDO"> COLORIDO</label>
+            <label style="margin-left: 15px;"><input type="checkbox" name="visualizacao_pm" value="FLUORESCENTE"> FLUORESCENTE</label>
+          </div>
+        </div>
+
+        <!-- Concentração -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="concentracao_pm">Concentração</label>
+          <input class="input-form" type="text" id="concentracao_pm" name="concentracao_pm" placeholder="Concentração">
+        </div>
+
+        <!-- Decantação -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="decantacao_pm">Decantação</label>
+          <input class="input-form" type="text" id="decantacao_pm" name="decantacao_pm" placeholder="Decantação">
+        </div>
+
+        <!-- Intensidade de Magnetização -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="intensidade_magnetizacao_pm">Intensidade de Magnetização</label>
+          <input class="input-form" type="text" id="intensidade_magnetizacao_pm" name="intensidade_magnetizacao_pm" placeholder="Intensidade de Magnetização">
+        </div>
+
+        <!-- Temperatura -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="temperatura_pm">Temperatura</label>
+          <input class="input-form" type="text" id="temperatura_pm" name="temperatura_pm" placeholder="Temperatura">
+        </div>
+
+        <!-- Tempo de Magnetização -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="tempo_magnetizacao_pm">Tempo de Magnetização</label>
+          <input class="input-form" type="text" id="tempo_magnetizacao_pm" name="tempo_magnetizacao_pm" placeholder="Tempo de Magnetização">
+        </div>
+
+        <!-- Intensidade de Luz Visível -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="intensidade_luz_visivel_pm">Intensidade de Luz Visível</label>
+          <input class="input-form" type="text" id="intensidade_luz_visivel_pm" name="intensidade_luz_visivel_pm" placeholder="Intensidade de Luz Visível">
+        </div>
+
+        <!-- Desmag -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="desmag_pm">Desmag</label>
+          <input class="input-form" type="text" id="desmag_pm" name="desmag_pm" placeholder="Desmag">
+        </div>
+
+        <!-- Intensidade de Luz UV -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="intensidade_luz_uv_pm">Intensidade de Luz UV</label>
+          <input class="input-form" type="text" id="intensidade_luz_uv_pm" name="intensidade_luz_uv_pm" placeholder="Intensidade de Luz UV">
+        </div>
+
+      </div>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Equipamentos e Acessórios</h3>
+      <br>
+      <button id="addEquipamentoPm" class="addEquipButton">Adicionar equipamento</button>
+      <table id="equipamentoTablePm" class="filesTable">
+        <thead>
+        <tr>
+          <th>Nome do Equipamento</th>
+          <th>Código do Equipamento</th>
+          <th>ID do Equipamento</th>
+          <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os equipamentos adicionados aparecerão aqui -->
+        </tbody>
+      </table>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Produtos</h3>
+      <br>
+      <button id="addProdutoPm" class="addEquipButton">Adicionar Produto</button>
+      <table id="produtoTablePm" class="filesTable">
+        <thead>
+        <tr>
+          <th>Categoria do produto</th>
+          <th>Codigo do produto</th>
+          <th>Fabricante do produto</th>
+          <th>Lote do produto</th>
+          <th>Validade do produto</th>
+          <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os produtos adicionados aparecerão aqui -->
+        </tbody>
+      </table>
+      <br>
+
+
+
+
+      <!-- AQUI EU QUERO QUE O USUARIO COLOQUE OS DADOS NOS INPUTS TEXT E ASSIM INSIRA OS DADOS NA TABELA APENAS OS DADSO QUE FORAM INSERIDOS NO CHECKBOX -->
+
+
+
+
+
+      <div class="form-group-container">
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="numero_pm">N°</label>
+          <input class="input-form" type="text" id="numero_pm" placeholder="N°">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="numero_peca_pm">N° da Peça</label>
+          <input class="input-form" type="text" id="numero_peca_pm" placeholder="N° da Peça">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="descontinuidade_pm">Descontinuidade</label>
+          <input class="input-form" type="text" id="descontinuidade_pm" placeholder="Descontinuidade">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="localizacao_pm">Localização</label>
+          <input class="input-form" type="text" id="localizacao_pm" placeholder="Localização">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="comprimento_pm">Comprimento</label>
+          <input class="input-form" type="text" id="comprimento_pm" placeholder="Comprimento">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="laudo_pm">Laudo</label>
+          <input class="input-form" type="text" id="laudo_pm" placeholder="Laudo">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="observacao_pm">Observação</label>
+          <input class="input-form" type="text" id="observacao_pm" placeholder="Observação">
+        </div>
+
+      </div>
+      <br>
+      <!-- Botão de Adicionar -->
+      <button type="button" id="adicionarRegistroBtnPm">Adicionar Registro</button>
+
+      <br><br>
+
+      <!-- Tabela dos Registros -->
+      <table id="tabelaRegistrosPm" class="filesTable">
+        <thead>
+        <tr>
+          <th>N°</th>
+          <th>N° da Peça</th>
+          <th>Descontinuidade</th>
+          <th>Localização</th>
+          <th>Comprimento</th>
+          <th>Laudo</th>
+          <th>Observação</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os registros aparecerão aqui -->
+        </tbody>
+      </table>
+
+      <br>
+      <h3 class="form-section-title poppins-semibold">Observações</h3>
+      <label for="observacao_input_lp" class="open-sans-regular">Insira aqui a sua observação</label>
+      <textarea name="observacao_input_lp" id="observacao_input_pm" class="input-form input-grande" placeholder="Insira suas observações"></textarea>
+      <br>
+      <h3 class="form-section-title poppins-semibold">Status da Inspeção</h3>
+      <br>
+      <div class="form-group-container-status">
+        <button type="button" class="open-sans-semibold" id="aprovadoBtnPm">Aprovado</button>
+        <button type="button" class="open-sans-semibold" id="reprovadoBtnPm">Reprovado</button>
+        <button type="button" class="open-sans-semibold" id="informativoBtnPm">Informativo</button>
+        <button type="button" class="open-sans-semibold" id="ensaioComplementarBtnPm">Ensaio Complementar</button>
+      </div>
+    </form>
+
+  </section>
+
+  <section>
+    <h1 class="poppins-bold">Relatorio Ultrassom</h1>
+    <form id="relatorio_ultrassom">
+      <h3 class="form-section-title poppins-semibold">Dados do Ensaio</h3>
+      <div class="form-group-container">
+
+        <!-- Técnica -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="tecnica_ultrassom">Técnica</label>
+          <input class="input-form" type="text" id="tecnica_ultrassom" name="tecnica_ultrassom" placeholder="Técnica">
+        </div>
+
+        <!-- Acoplante -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="acoplante_ultrassom">Acoplante</label>
+          <input class="input-form" type="text" id="acoplante_ultrassom" name="acoplante_ultrassom" placeholder="Acoplante">
+        </div>
+
+        <!-- Temperatura -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="temperatura_ultrassom">Temperatura</label>
+          <input class="input-form" type="text" id="temperatura_ultrassom" name="temperatura_ultrassom" placeholder="Temperatura">
+        </div>
+
+        <!-- Referência -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="referencia_ultrassom">Referência</label>
+          <input class="input-form" type="text" id="referencia_ultrassom" name="referencia_ultrassom" placeholder="Referência">
+        </div>
+
+      </div>
+
+
+      <h3 class="form-section-title poppins-semibold">Equipamentos e Acessórios</h3>
+      <br>
+      <button id="addEquipamentoUltrassom" class="addEquipButton">Adicionar equipamento</button>
+      <table id="equipamentoTableUltrassom" class="filesTable">
+        <thead>
+        <tr>
+          <th>Nome do Equipamento</th>
+          <th>Código do Equipamento</th>
+          <th>ID do Equipamento</th>
+          <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os equipamentos adicionados aparecerão aqui -->
+        </tbody>
+      </table>
+
+
+      <!-- AQUI EU QUERO QUE O USUARIO COLOQUE OS DADOS NOS INPUTS TEXT E ASSIM INSIRA OS DADOS NA TABELA APENAS OS DADSO QUE FORAM INSERIDOS NO CHECKBOX -->
+
+
+      <h3 class="form-section-title poppins-semibold">Utilização</h3>
+      <div class="form-group-container">
+        <!-- Posição -->
+        <div class="form-group">
+
+          <div class="form-group">
+            <label class="label-form open-sans-semibold" for="identificacao_junta">Identificação da junta</label>
+            <input class="input-form" type="text" id="identificacao_junta" placeholder="Identificação da junta">
+          </div>
+          <label class="label-form open-sans-semibold" for="posicao_junta">Posição</label>
+          <input class="input-form" type="text" id="posicao_junta" placeholder="Posição">
+        </div>
+
+
+      </div>
+
+      <br>
+
+      <!-- Cabeçotes -->
+      <h3 class="form-section-title poppins-semibold">Cabeçotes</h3>
+      <div class="form-group-container">
+        <!-- Ângulo (Graus) -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="angulo_junta">Ângulo (Graus)</label>
+          <input class="input-form" type="text" id="angulo_junta" placeholder="Ângulo (Graus)">
+        </div>
+
+        <!-- Modelo -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="modelo_junta">Modelo</label>
+          <input class="input-form" type="text" id="modelo_junta" placeholder="Modelo">
+        </div>
+
+        <!-- Marca -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="marca_junta">Marca</label>
+          <input class="input-form" type="text" id="marca_junta" placeholder="Marca">
+        </div>
+
+        <!-- Dimensão -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="dimensao_junta">Dimensão</label>
+          <input class="input-form" type="text" id="dimensao_junta" placeholder="Dimensão">
+        </div>
+
+        <!-- Frequência (MHz) -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="frequencia_junta">Frequência (MHz)</label>
+          <input class="input-form" type="text" id="frequencia_junta" placeholder="Frequência (MHz)">
+        </div>
+
+        <!-- N° Série -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="numero_serie_junta">N° Série</label>
+          <input class="input-form" type="text" id="numero_serie_junta" placeholder="N° Série">
+        </div>
+      </div>
+
+      <!-- Ganho (dB) -->
+      <h3 class="form-section-title poppins-semibold">Ganho (dB)</h3>
+      <div class="form-group-container">
+        <!-- GP -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="gp_junta">GP</label>
+          <input class="input-form" type="text" id="gp_junta" placeholder="GP">
+        </div>
+
+        <!-- PT -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="pt_junta">PT</label>
+          <input class="input-form" type="text" id="pt_junta" placeholder="PT">
+        </div>
+
+        <!-- GV -->
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="gv_junta">GV</label>
+          <input class="input-form" type="text" id="gv_junta" placeholder="GV">
+        </div>
+      </div>
+
+      <br>
+      <!-- Botão de Adicionar -->
+      <button type="button" id="adicionarRegistroBtnJunta">Adicionar Registro</button>
+
+      <br><br>
+
+      <!-- Tabela dos Registros -->
+      <table id="tabelaRegistrosJunta" class="filesTable">
+        <thead>
+        <tr>
+          <th>Identificação da junta</th>
+          <th>Posição</th>
+          <th>Ângulo (Graus)</th>
+          <th>Modelo</th>
+          <th>Marca</th>
+          <th>Dimensão</th>
+          <th>Frequência (MHz)</th>
+          <th>N° Série</th>
+          <th>GP</th>
+          <th>PT</th>
+          <th>GV</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os registros aparecerão aqui -->
+        </tbody>
+      </table>
+      <br>
+
+
+
+      <!-- AQUI EU QUERO QUE O USUARIO COLOQUE OS DADOS NOS INPUTS TEXT E ASSIM INSIRA OS DADOS NA TABELA APENAS OS DADSO QUE FORAM INSERIDOS NO CHECKBOX -->
+
+
+
+      <h3 class="form-section-title poppins-semibold">Dados das Descontinuidades</h3>
+
+      <div class="form-group-container">
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="numero_ultrassom">N°</label>
+          <input class="input-form" type="text" id="numero_ultrassom" placeholder="N°">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="inicio_ultrassom">Início</label>
+          <input class="input-form" type="text" id="inicio_ultrassom" placeholder="Início">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="comprimento_ultrassom">Comprimento</label>
+          <input class="input-form" type="text" id="comprimento_ultrassom" placeholder="Comprimento">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="profundidade_ultrassom">Profundidade</label>
+          <input class="input-form" type="text" id="profundidade_ultrassom" placeholder="Profundidade">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="distancia_ultrassom">Distância</label>
+          <input class="input-form" type="text" id="distancia_ultrassom" placeholder="Distância">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="resposta_db_ultrassom">Resposta dB</label>
+          <input class="input-form" type="text" id="resposta_db_ultrassom" placeholder="Resposta dB">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="observacao_ultrassom">Observação</label>
+          <input class="input-form" type="text" id="observacao_ultrassom" placeholder="Observação">
+        </div>
+
+      </div>
+      <br>
+      <!-- Botão de Adicionar -->
+      <button type="button" id="adicionarRegistroBtnUltrassom">Adicionar Registro</button>
+
+      <br><br>
+
+      <!-- Tabela dos Registros -->
+      <table id="tabelaRegistrosUltrassom" class="filesTable">
+        <thead>
+        <tr>
+          <th>N°</th>
+          <th>Início</th>
+          <th>Comprimento</th>
+          <th>Profundidade</th>
+          <th>Distância</th>
+          <th>Resposta dB</th>
+          <th>Observação</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os registros aparecerão aqui -->
+        </tbody>
+      </table>
+
+
+
+      <!-- AQUI EU QUERO QUE O USUARIO COLOQUE OS DADOS NOS INPUTS TEXT E ASSIM INSIRA OS DADOS NA TABELA APENAS OS DADSO QUE FORAM INSERIDOS NO CHECKBOX -->
+
+
+
+      <br>
+      <h3 class="form-section-title poppins-semibold">Observações</h3>
+      <label for="observacao_input_lp" class="open-sans-regular">Insira aqui a sua observação</label>
+      <textarea name="observacao_input_lp" id="observacao_input_ultrassom" class="input-form input-grande" placeholder="Insira suas observações"></textarea>
+      <br>
+
+      <h3 class="form-section-title poppins-semibold">Detalhamento</h3>
+
+      <div class="form-group-container">
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="junta_ultrassom">Junta</label>
+          <input class="input-form" type="text" id="junta_ultrassom" placeholder="Junta">
+        </div>
+
+        <div class="form-group">
+          <label class="label-form open-sans-semibold" for="lado_ultrassom">Lado</label>
+          <input class="input-form" type="text" id="lado_ultrassom" placeholder="Lado">
+        </div>
+
+      </div>
+      <br>
+
+
+      <!-- AQUI EU QUERO QUE O USUARIO COLOQUE OS DADOS NOS INPUTS TEXT E ASSIM INSIRA OS DADOS NA TABELA APENAS OS DADSO QUE FORAM INSERIDOS NO CHECKBOX -->
+
+
+      <!-- Botão de Adicionar Detalhamento -->
+      <button type="button" id="adicionarDetalhamentoBtnUltrassom">Adicionar Detalhamento</button>
+
+      <br><br>
+
+      <!-- Tabela dos Detalhamentos -->
+      <table id="tabelaDetalhamentosUltrassom" class="filesTable">
+        <thead>
+        <tr>
+          <th>Junta</th>
+          <th>Lado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Os detalhamentos aparecerão aqui -->
+        </tbody>
+      </table>
+
+      <br><br>
+
+      <!-- Botão para adicionar imagem -->
+      <h4 class="form-section-title poppins-semibold">Imagem do Detalhamento</h4>
+      <input type="file" id="imagemInputUltrassom" accept="image/*">
+
+      <br><br>
+
+      <!-- Área para mostrar a imagem -->
+      <img id="imagemPreviewUltrassom" src="" alt="Imagem do Detalhamento" style="max-width: 100%; height: auto; display: none;">
+      <br>
+      <h3 class="form-section-title poppins-semibold">Status da Inspeção</h3>
+      <br>
+      <div class="form-group-container-status">
+        <button type="button" class="open-sans-semibold" id="aprovadoBtnUltrassom">Aprovado</button>
+        <button type="button" class="open-sans-semibold" id="reprovadoBtnUltrassom">Reprovado</button>
+        <button type="button" class="open-sans-semibold" id="informativoBtnUltrassom">Informativo</button>
+        <button type="button" class="open-sans-semibold" id="ensaioComplementarBtnUltrassom">Ensaio Complementar</button>
+      </div>
+    </form>
+
+  </section>
 </main>
 
 <div id="identificationModal" class="modal">
