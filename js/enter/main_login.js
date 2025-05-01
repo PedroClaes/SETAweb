@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
 
+
 // Configuração do Firebase (substitua com as informações do seu projeto)
 const firebaseConfig = {
   apiKey: "AIzaSyCBnaKnOE7Ba8Bi-KBbK876TFJwRNtb1X0",
@@ -19,7 +20,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 // Variável global para armazenar o usuário autenticado
-let currentUser = null;
+const currentUser = null;
 
 // Função de login
 const login = (email, password) => {
@@ -28,8 +29,9 @@ const login = (email, password) => {
       // Usuário autenticado com sucesso
       const user = userCredential.user;
       alert("Usuário logado:", user);
+      const currentUser = parseInt(Math. random() * 3) + 1;
       // Redirecionamento ou qualquer outra lógica após login bem-sucedido
-      window.location.href = "../pages/solicitacoes.html"; // Redireciona para a página principal ou outra página após login
+      window.location.href = "../pages/solicitacoesUSER.html"; // Redireciona para a página principal ou outra página após login
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -46,7 +48,7 @@ onAuthStateChanged(auth, (user) => {
     console.log("Usuário autenticado:", user.uid);
   } else {
     // Usuário não está autenticado
-    currentUser = null;
+    const currentUser = null;
     console.log("Usuário não autenticado");
   }
 });

@@ -1,0 +1,126 @@
+@import "/css/variables.css";
+
+
+header{
+  width: 100%;
+  padding: 12px;
+  background-color: var(--cor-primaria);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header button{
+  background-color: transparent;
+  border: none;
+  color: var(--cor-fundo-branco);
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+}
+
+header nav{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+header nav button{
+  background-color: transparent;
+  border: none;
+  color: var(--cor-fundo-branco);
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+}
+
+header nav button:nth-child(7){
+  background-color: var(--cor-secundaria);
+  border: none;
+  color: var(--cor-fundo-branco);
+  font-size: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  header button {
+    display: block;
+  }
+
+  .user-navigation {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 12px;
+  }
+
+  .user-navigation.open {
+    max-height: 400px; /* Ajuste conforme necessário */
+  }
+
+  header img {
+    display: none;
+  }
+}
+
+section {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rastreabilidade_fieldset{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: none;
+  gap: 12px;
+}
+
+.camps10{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.formGroup{
+  display: flex;
+  flex-direction: column;
+}
+
+#identifications{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#identifications button{
+  border: none;
+  background-color: var(--cor-secundaria);
+  padding: 16px;
+  color: var(--cor-texto-branco);
+  font-size: 12px;
+  border-radius: 8px;
+}

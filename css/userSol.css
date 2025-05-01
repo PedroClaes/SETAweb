@@ -1,0 +1,20 @@
+@import "components/solicitacoes/solicitacoesUSER/headerUSER.css";
+@import "components/solicitacoes/solicitacoesUSER/itensSOL.css";
+@import "/css/variables.css";
+@import "components/solicitacoes/solicitacoesADM/style_listaSolicitacao.css";
+
+/* Reset de estilos para garantir consistência entre os navegadores */
+/* Reset de estilos para garantir consistência entre os navegadores */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%; /* Garantir que o html e body ocupem 100% */
+  width: 100%;  /* Garantir que o body ocupe 100% da largura */
+}
+
+
+

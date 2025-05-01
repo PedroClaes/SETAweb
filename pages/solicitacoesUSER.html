@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solicitações - SETA</title>
+  <link rel="stylesheet" href="../css/userSol.css" />
+</head>
+<body>
+<header>
+  <button class="menu-toggle">&#9776;</button>
+  <img src="../assets/visual_identity/Logo_fundo_SETA.jpg" alt="Logotipo SETA" width="100px" height="50px" />
+  <nav class="user-navigation" id="user-navigation">
+    <h2 class="user-name"></h2>
+    <button id="navSolic" class="open-sans-semibold">Solicitações</button>
+    <button id="navDocs" class="admin-only open-sans-semibold">Documentos</button>
+    <button id="navEqup" class="admin-only open-sans-semibold">Equipamentos</button>
+    <button id="navProd" class="admin-only open-sans-semibold">Produtos</button>
+    <button id="exitAccount" class="open-sans-semibold">Sair da conta</button>
+    <button class="request-test-btn open-sans-semibold">
+      Solicitar um ensaio <img src="../assets/icons/Icon_arrow_right.png" alt="Ícone de seta" />
+    </button>
+  </nav>
+</header>
+
+<h1 id="title">Solicitações</h1>
+
+<div class="header">
+  <!-- Campo de pesquisa -->
+  <div class="search-container" style="margin-bottom: 20px;">
+    <input type="text" id="searchInput" placeholder="Pesquisar por ID da solicitação" />
+  </div>
+
+  <p id="no_result" style="display: none; color: red;">Nenhuma solicitação encontrada.</p>
+
+  <!-- Botões de ação -->
+  <div class="filtro-container">
+    <button class="filtro-btn" id="toggleFiltro">Filtrar</button>
+    <div class="painel-filtro" id="painelFiltro" style="display: none;">
+      <section>
+
+        <strong>Tipo Inspeção:</strong>
+        <div class="filter tipo-inspecao">
+          <label><input type="checkbox" class="filter tipo-inspecao" value="Inspecao visual"> Inspeção Visual </label>
+          <br><label><input type="checkbox" class="filter tipo-inspecao" value="dureza"> Dureza </label>
+          <br><label><input type="checkbox" class="filter tipo-inspecao" value="lp"> LP </label>
+          <br><label><input type="checkbox" class="filter tipo-inspecao" value="pm"> PM </label>
+          <br><label><input type="checkbox" class="filter tipo-inspecao" value="ultrassom"> Ultrassom </label>
+        </div>
+
+
+
+
+
+      </section>
+      <section>
+        <strong>Data:</strong>
+        <label><input type="radio" name="ordemData" id="dataCrescente" /> Crescente</label>
+        <label><input type="radio" name="ordemData" id="dataDecrescente" /> Decrescente</label>
+
+      </section>
+
+      <section>
+        <strong>Status:</strong>
+        <label><input type="checkbox" value="concluido" class="filter status"> Concluído </label>
+        <label><input type="checkbox" value="pendente" class="filter status"> Pendente </label>
+        <label><input type="checkbox" value="cancelado" class="filter status"> Cancelado </label>
+      </section>
+    </div>
+  </div>
+</div>
+
+<div id="SolicitacoesContainer" style="cursor: pointer;"></div>
+
+
+<script type="module" src="../js/solicitacao/mainSUser.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>
+
