@@ -67,11 +67,11 @@ async function checkUser() {
     const solicitacoes = await getRequests();
 
     SolicitacoesContainer.innerHTML += solicitacoes.map(request => {
-      const dataSolicitacao = request.data?.toDate?.();
+      const dataSolicitacao = request.data_solicitacao?.toDate?.();
       const dataFormatada = dataSolicitacao
         ? dataSolicitacao.toLocaleDateString("pt-BR")
         : "Sem data";
-        const timestamp = dataSolicitacao ? dataSolicitacao.getTime() : 0;
+      const timestamp = dataSolicitacao ? dataSolicitacao.getTime() : 0;
 
       let statusClass = "";
       switch (request.status?.toLowerCase()) {

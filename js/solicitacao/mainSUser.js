@@ -119,5 +119,3 @@ document.getElementById('toggleFiltro').addEventListener('click', function() {
   const painel = document.getElementById('painelFiltro');
   painel.classList.toggle('aberto');
 });
-
-

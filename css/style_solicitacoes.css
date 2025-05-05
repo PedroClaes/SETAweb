@@ -3,7 +3,6 @@
 @import "components/solicitacoes/form_solicitacoes.css";
 @import "components/solicitacoes/textBox_solicitacoes.css";
 @import "components/solicitacoes/dadospeca.css";
-@import "components/solicitacoes/solicitacoesADM/style_listaSolicitacao.css";
 @import "/css/variables.css";
 
 /* Reset de estilos para garantir consistência entre os navegadores */

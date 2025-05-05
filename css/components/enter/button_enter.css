@@ -24,7 +24,7 @@
 
 .texto_botao{
   font-size: 16px;
-  --cor-texto-branco: white; /* Cor do texto branco */
+  --cor-texto-branco: #7eb1b1; /* Cor do texto branco */
   white-space: nowrap; /* Impede que o texto quebre dentro do botão */
   text-align: center; /* Alinha o texto no centro */
 }

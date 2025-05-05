@@ -83,7 +83,7 @@ async function displayRequests() {
       const dataFormatada = dataSolicitacao
         ? dataSolicitacao.toLocaleDateString("pt-BR")
         : "Sem data";
-        const timestamp = dataSolicitacao ? dataSolicitacao.getTime() : 0;
+      const timestamp = dataSolicitacao ? dataSolicitacao.getTime() : 0;
 
 
       // Define a cor de acordo com o status
