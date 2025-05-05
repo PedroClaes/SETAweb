@@ -1,85 +1,70 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
 
-// 🔧 Configuração do Firebase
+// Configuração do Firebase (substitua com as informações do seu projeto)
 const firebaseConfig = {
   apiKey: "AIzaSyCBnaKnOE7Ba8Bi-KBbK876TFJwRNtb1X0",
   authDomain: "setaweb-ed47c.firebaseapp.com",
   projectId: "setaweb-ed47c",
-  storageBucket: "setaweb-ed47c.appspot.com",
+  storageBucket: "setaweb-ed47c.firebasestorage.app",
   messagingSenderId: "922588992383",
   appId: "1:922588992383:web:48ea0dd8c55f99b1a7804a",
   measurementId: "G-SXMK5Y8BQS"
 };
 
-// 🚀 Inicializa o Firebase
+// Inicializa o Firebase
 const app = initializeApp(firebaseConfig);
+
+// Inicializa o Firebase Authentication
 const auth = getAuth(app);
 
-// 🌐 Verifica se está na página de solicitações
-const isOnSolicitacoesPage = window.location.pathname.includes("solicitacoes.html");
-
-// 📦 Variável global com UID do usuário
+// Variável global para armazenar o usuário autenticado
 let currentUser = null;
 
-// 🔐 Login
-const login = async (email, password) => {
-  try {
-    const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    const user = userCredential.user;
-
-    if (user && user.uid) {
-      currentUser = user.uid;
-      alert("Login bem-sucedido! UID:", currentUser);
-      window.location.href = "../pages/solicitacoes.html";
-    }
-  } catch (error) {
-    console.error("Erro de login:", error.code, error.message);
-    alert("E-mail ou senha inválidos. Tente novamente.");
-  }
+// Função de login
+const login = (email, password) => {
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Usuário autenticado com sucesso
+      const user = userCredential.user;
+      alert("Usuário logado:", user);
+      // Redirecionamento ou qualquer outra lógica após login bem-sucedido
+      window.location.href = "../pages/solicitacoes.html"; // Redireciona para a página principal ou outra página após login
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error(`Erro: ${errorCode}, ${errorMessage}`);
+      alert("E-mail ou senha inválidos. Tente novamente."); // Mensagem de erro
+    });
 };
 
-// 👀 Observa mudanças no estado de autenticação
+// Verificação do estado de autenticação
 onAuthStateChanged(auth, (user) => {
-  if (user && user.uid) {
-    currentUser = user.uid;
-    console.log("Usuário autenticado:", currentUser);
-
-    if (!isOnSolicitacoesPage) {
-      window.location.href = "../pages/solicitacoes.html";
-    }
+  if (user) {
+    // Usuário está autenticado
+    console.log("Usuário autenticado:", user.uid);
   } else {
+    // Usuário não está autenticado
     currentUser = null;
-    console.log("Usuário não autenticado.");
-
-    if (isOnSolicitacoesPage) {
-      window.location.href = "../index.html";
-    }
+    console.log("Usuário não autenticado");
   }
 });
 
-// 🧠 Lógica do botão de login
-document.addEventListener("DOMContentLoaded", () => {
-  const loginButton = document.querySelector(".enterBTN");
+// Função chamada quando o botão de login é clicado
+const loginButton = document.querySelector(".enterBTN"); // Seleciona o botão de login
 
-  if (loginButton) {
-    loginButton.addEventListener("click", (event) => {
-      event.preventDefault();
+loginButton.addEventListener("click", (event) => {
+  event.preventDefault(); // Impede o comportamento padrão do botão
 
-      const email = document.getElementById("inemailtxt").value.trim();
-      const password = document.getElementById("insenhatxt").value;
+  // Captura os valores dos campos de email e senha
+  const email = document.getElementById("inemailtxt").value;
+  const password = document.getElementById("insenhatxt").value;
 
-      if (email && password) {
-        login(email, password);
-      } else {
-        alert("Por favor, preencha todos os campos.");
-      }
-    });
+  // Verifica se os campos de email e senha não estão vazios antes de tentar fazer login
+  if (email && password) {
+    login(email, password); // Chama a função de login
+  } else {
+    alert("Por favor, preencha todos os campos.");
   }
 });
-
-export { currentUser };
