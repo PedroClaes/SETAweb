@@ -1,0 +1,100 @@
+@import "components/solicitacoes/modal_solicitacoes.css";
+@import "components/solicitacoes/header_solicitacoes.css";
+@import "/css/variables.css";
+
+/* Reset de estilos para garantir consistência entre os navegadores */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--cor-fundo-branco) !important;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-padrao);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 80px);
+}
+
+#criar-documento-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--cor-fundo-branco); /* Substituído o #f9f9f9 */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-padrao);
+}
+
+.formulario-doc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grupo-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-doc {
+  margin-bottom: 0.3rem;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-padrao);
+}
+
+.input-doc {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid var(--cor-borda_textBox); /* Substituir #ccc */
+  border-radius: 6px;
+  transition: border-color 0.3s;
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-padrao);
+  background-color: var(--cor-fundo-branco);
+}
+
+.input-doc:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+}
+
+.botao-salvar {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-branco);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: var(--fonte-principal);
+  font-weight: var(--font-weight-semibold);
+}
+
+.botao-salvar:hover {
+  background-color: var(--cor-tercearia); /* Hover com cor alternativa */
+}
