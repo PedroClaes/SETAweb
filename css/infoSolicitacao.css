@@ -1,0 +1,46 @@
+@import "components/solicitacoes/modal_solicitacoes.css";
+@import "components/solicitacoes/header_solicitacoes.css";
+@import "components/solicitacoes/form_solicitacoes.css";
+@import "components/solicitacoes/textBox_solicitacoes.css";
+@import "components/solicitacoes/dadospeca.css";
+@import "components/solicitacoes/solicitacoesADM/style_listaSolicitacao.css";
+@import "/css/variables.css";
+
+/* Reset de estilos para garantir consistência entre os navegadores */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--cor-fundo-branco) !important;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: var(--fonte-principal); /* Fonte principal aplicada ao body */
+  color: var(--cor-texto-padrao); /* Cor de texto padrão */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 80px);
+}
+
+ul {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem 0;
+  background-color: #f5f5f5;
+  border: 1px solid var(--cor-borda_textBox); /* substituído por variável */
+  border-radius: 8px;
+  font-family: var(--fonte-secundaria); /* substituído por variável */
+  font-size: 14px;
+  color: var(--cor-texto-padrao); /* substituído por variável */
+}
