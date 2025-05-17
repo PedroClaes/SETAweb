@@ -59,7 +59,7 @@ onAuthStateChanged(auth, (user) => {
 
 //navBar
 document.getElementById("navSolic").addEventListener("click", () => {
-  window.location.href = "solicitacoes.html";
+  window.location.href = "solicitacoesUSER.html";
 });
 
 document.getElementById("navDocs").addEventListener("click", () => {

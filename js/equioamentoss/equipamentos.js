@@ -157,7 +157,7 @@ Object.keys(checkboxes).forEach(tipo => {
 
 // Navegação
 document.getElementById("navSolic").addEventListener("click", () => {
-  window.location.href = "solicitacoes.html";
+  window.location.href = "solicitacoesUSER.html";
 });
 
 document.getElementById("navDocs").addEventListener("click", () => {
