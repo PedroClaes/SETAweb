@@ -214,6 +214,10 @@
 
 
 
+
+
+
+
   <section>
     <h1 class="poppins-bold">Relatorio de dureza</h1>
     <form id="relatorio_dureza">
@@ -274,22 +278,32 @@
       <h3 class="form-section-title poppins-semibold">Dados de equipamento e acessórios</h3>
       <div class="form-group-container">
         <button id="addEquipamentoDureza" class="addEquipButton">Adicionar equipamento</button>
+        <button id="selecionarEquipamentoDureza" class="addEquipButton" type="button">Selecionar Equipamento Cadastrado</button>
+
+        <div id="equipSelectContainerDureza" style="display:none; margin-top: 10px;">
+          <label for="equipamentoSelect-dureza">Selecionar equipamento:</label>
+          <select id="equipamentoSelect-dureza">
+            <option value="">Carregando equipamentos...</option>
+          </select>
+          <button id="confirmarEquipamentoDureza" type="button">Confirmar</button>
+        </div>
+
         <table id="equipamentoTableDureza" class="filesTable">
           <thead>
           <tr>
-            <th>Equipamento</th>
-            <th>N° Serie</th>
-            <th>Certificado</th>
+            <th>Nome</th>
+            <th>Número de Série</th>
+            <th>ID Equipamento</th>
             <th>Validade</th>
-            <th>ID</th>
+            <th>Certificado</th>
             <th>Ações</th>
           </tr>
           </thead>
-          <tbody>
-          <!-- Os arquivos adicionados aparecerão aqui -->
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
+
+
       <br>
       <h3 class="form-section-title poppins-semibold">Registros</h3>
 
@@ -436,20 +450,33 @@
 
       <h3 class="form-section-title poppins-semibold">Equipamentos e Acessórios</h3>
       <br>
+      <div class="form-group-container">
       <button id="addEquipamentoVisual" class="addEquipButton">Adicionar equipamento</button>
+      <button id="selecionarEquipamentoVisual" class="addEquipButton" type="button">Selecionar Equipamento Cadastrado</button>
+
+      <div id="equipSelectContainerVisual" style="display:none; margin-top: 10px;">
+        <label for="equipamentoSelect-Vizual">Selecionar equipamento:</label>
+        <select id="equipamentoSelect-Vizual">
+          <option value="">Carregando equipamentos...</option>
+        </select>
+        <button id="confirmarEquipamentoVisual" type="button">Confirmar</button>
+      </div>
+
       <table id="equipamentoTableVisual" class="filesTable">
         <thead>
         <tr>
-          <th>Nome do Equipamento</th>
-          <th>Código do Equipamento</th>
-          <th>ID do Equipamento</th>
+          <th>Nome</th>
+          <th>Certificado</th>
+          <th>ID</th>
           <th>Ações</th>
         </tr>
         </thead>
-        <tbody>
-        <!-- Os equipamentos adicionados aparecerão aqui -->
-        </tbody>
+        <tbody></tbody>
       </table>
+    </div>
+
+
+
 
       <h3 class="form-section-title poppins-semibold">Registros</h3>
 
@@ -605,39 +632,58 @@
       <br>
       <h3 class="form-section-title poppins-semibold">Equipamentos e Acessórios</h3>
       <br>
-      <button id="addEquipamentoLp" class="addEquipButton">Adicionar equipamento</button>
-      <table id="equipamentoTableLp" class="filesTable">
-        <thead>
-        <tr>
-          <th>Nome do Equipamento</th>
-          <th>Código do Equipamento</th>
-          <th>ID do Equipamento</th>
-          <th>Ações</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!-- Os equipamentos adicionados aparecerão aqui -->
-        </tbody>
-      </table>
+      <div class="form-group-container">
+        <button id="addEquipamentoLp" class="addEquipButton">Adicionar equipamento</button>
+        <button id="selecionarEquipamentoLp" class="addEquipButton" type="button">Selecionar Equipamento Cadastrado</button>
+
+        <div id="equipSelectContainerLp" style="display:none; margin-top: 10px;">
+          <label for="equipamentoSelect-LP">Selecionar equipamento:</label>
+          <select id="equipamentoSelect-LP">
+            <option value="">Carregando equipamentos...</option>
+          </select>
+          <button id="confirmarEquipamentoLp" type="button">Confirmar</button>
+        </div>
+
+        <table id="equipamentoTableLp" class="filesTable">
+          <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Certificado</th>
+            <th>ID</th>
+            <th>Ações</th>
+          </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
       <br>
       <h3 class="form-section-title poppins-semibold">Produtos</h3>
       <br>
       <button id="addProdutoLp" class="addEquipButton">Adicionar Produto</button>
+
+      <!-- Botão e tabela de produtos para LP -->
+      <button id="btnSelecionarProdutoLp" type="button" class="addEquipButton" style="margin-left: 10px;">
+        Selecionar Produto Cadastrado
+      </button>
+
       <table id="produtoTableLp" class="filesTable">
         <thead>
         <tr>
           <th>Categoria do produto</th>
-          <th>Codigo do produto</th>
-          <th>Fabricante do produto</th>
-          <th>Lote do produto</th>
-          <th>Validade do produto</th>
+          <th>Código do produto</th>
+          <th>Fabricante</th>
+          <th>Lote</th>
+          <th>Validade</th>
           <th>Ações</th>
         </tr>
         </thead>
         <tbody>
-        <!-- Os equipamentos adicionados aparecerão aqui -->
+        <!-- Os produtos adicionados aparecerão aqui -->
         </tbody>
       </table>
+
+
 
       <br>
       <h3 class="form-section-title poppins-semibold">Observações</h3>
@@ -779,39 +825,56 @@
       <br>
       <h3 class="form-section-title poppins-semibold">Equipamentos e Acessórios</h3>
       <br>
-      <button id="addEquipamentoPm" class="addEquipButton">Adicionar equipamento</button>
-      <table id="equipamentoTablePm" class="filesTable">
-        <thead>
-        <tr>
-          <th>Nome do Equipamento</th>
-          <th>Código do Equipamento</th>
-          <th>ID do Equipamento</th>
-          <th>Ações</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!-- Os equipamentos adicionados aparecerão aqui -->
-        </tbody>
-      </table>
+      <div class="form-group-container">
+        <button id="addEquipamentoPm" class="addEquipButton">Adicionar equipamento</button>
+        <button id="selecionarEquipamentoPm" class="addEquipButton" type="button">Selecionar Equipamento Cadastrado</button>
+
+        <div id="equipSelectContainerPm" style="display:none; margin-top: 10px;">
+          <label for="equipamentoSelect-PM">Selecionar equipamento:</label>
+          <select id="equipamentoSelect-PM">
+            <option value="">Carregando equipamentos...</option>
+          </select>
+          <button id="confirmarEquipamentoPm" type="button">Confirmar</button>
+        </div>
+
+        <table id="equipamentoTablePm" class="filesTable">
+          <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Certificado</th>
+            <th>ID</th>
+            <th>Ações</th>
+          </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
       <br>
       <h3 class="form-section-title poppins-semibold">Produtos</h3>
       <br>
       <button id="addProdutoPm" class="addEquipButton">Adicionar Produto</button>
+      <!-- Botão para selecionar produto PM -->
+      <button id="btnSelecionarProdutoPm" type="button" class="addEquipButton" style="margin-left: 10px;">
+        Selecionar Produto Cadastrado
+      </button>
+
       <table id="produtoTablePm" class="filesTable">
         <thead>
         <tr>
           <th>Categoria do produto</th>
-          <th>Codigo do produto</th>
-          <th>Fabricante do produto</th>
-          <th>Lote do produto</th>
-          <th>Validade do produto</th>
+          <th>Código do produto</th>
+          <th>Fabricante</th>
+          <th>Lote</th>
+          <th>Validade</th>
           <th>Ações</th>
         </tr>
         </thead>
         <tbody>
-        <!-- Os produtos adicionados aparecerão aqui -->
+        <!-- Produtos adicionados aparecerão aqui -->
         </tbody>
       </table>
+
       <br>
 
 
@@ -937,20 +1000,31 @@
 
       <h3 class="form-section-title poppins-semibold">Equipamentos e Acessórios</h3>
       <br>
-      <button id="addEquipamentoUltrassom" class="addEquipButton">Adicionar equipamento</button>
-      <table id="equipamentoTableUltrassom" class="filesTable">
-        <thead>
-        <tr>
-          <th>Nome do Equipamento</th>
-          <th>Código do Equipamento</th>
-          <th>ID do Equipamento</th>
-          <th>Ações</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!-- Os equipamentos adicionados aparecerão aqui -->
-        </tbody>
-      </table>
+      <div class="form-group-container">
+        <button id="addEquipamentoUltrassom" class="addEquipButton">Adicionar equipamento</button>
+        <button id="selecionarEquipamentoUltrassom" class="addEquipButton" type="button">Selecionar Equipamento Cadastrado</button>
+
+        <div id="equipSelectContainerUltrassom" style="display:none; margin-top: 10px;">
+          <label for="equipamentoSelect-Ultrassom">Selecionar equipamento:</label>
+          <select id="equipamentoSelect-Ultrassom">
+            <option value="">Carregando equipamentos...</option>
+          </select>
+          <button id="confirmarEquipamentoUltrassom" type="button">Confirmar</button>
+        </div>
+
+        <table id="equipamentoTableUltrassom" class="filesTable">
+          <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Certificado</th>
+            <th>ID</th>
+            <th>Ações</th>
+          </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
 
 
       <!-- AQUI EU QUERO QUE O USUARIO COLOQUE OS DADOS NOS INPUTS TEXT E ASSIM INSIRA OS DADOS NA TABELA APENAS OS DADSO QUE FORAM INSERIDOS NO CHECKBOX -->

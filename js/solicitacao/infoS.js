@@ -209,3 +209,25 @@ function exibirDados(dados) {
 
 // Chama a função ao carregar a página
 buscarDetalhesSolicitacao();
+
+//navBar
+
+document.getElementById("navSolic").addEventListener("click", () => {
+  window.location.href = "solicitacoes.html";
+});
+
+document.getElementById("navDocs").addEventListener("click", () => {
+  window.location.href = "documentos.html";
+});
+
+document.getElementById("navEqup").addEventListener("click", () => {
+  window.location.href = "equipamentos.html";
+});
+
+document.getElementById("navProd").addEventListener("click", () => {
+  window.location.href = "produtos.html";
+});
+
+document.querySelector(".request-test-btn").addEventListener("click", () => {
+  window.location.href = "solicitar-ensaio.html";
+});

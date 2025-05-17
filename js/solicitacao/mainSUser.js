@@ -22,11 +22,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (container.innerHTML.trim() === "" || container.innerHTML.includes("Nenhuma solicitação")) {
       console.warn("displayRequests não trouxe resultados. Executando checkUser como fallback.");
       await checkUser();
+      window.originalRequestItems = Array.from(document.querySelectorAll(".request-item"));
     }
 
   } catch (err) {
     console.error("Erro em displayRequests. Executando checkUser:", err);
     await checkUser();
+    window.originalRequestItems = Array.from(document.querySelectorAll(".request-item"));
   }
 });
 
@@ -118,4 +120,27 @@ function configurarFiltros() {
 document.getElementById('toggleFiltro').addEventListener('click', function() {
   const painel = document.getElementById('painelFiltro');
   painel.classList.toggle('aberto');
+});
+
+
+//navBar
+
+document.getElementById("navSolic").addEventListener("click", () => {
+  window.location.href = "solicitacoes.html";
+});
+
+document.getElementById("navDocs").addEventListener("click", () => {
+  window.location.href = "documentos.html";
+});
+
+document.getElementById("navEqup").addEventListener("click", () => {
+  window.location.href = "equipamentos.html";
+});
+
+document.getElementById("navProd").addEventListener("click", () => {
+  window.location.href = "produtos.html";
+});
+
+document.querySelector(".request-test-btn").addEventListener("click", () => {
+  window.location.href = "solicitacoes.html";
 });

@@ -104,7 +104,6 @@ async function checkUser() {
                 <p>${ensaiosAtivos || "Nenhum"}</p>
                 <p>${dataFormatada}</p>
                 <p><span class="status-badge ${statusClass}">${request.status}</span></p>
-                <button class="delete-btn" data-id="${request.id}">Excluir</button>
             </div>`;
 
 
@@ -120,7 +119,7 @@ async function checkUser() {
 const div = document.getElementById("SolicitacoesContainer");
 
 div.addEventListener("click", () => {
-  //window.location.href = "infoSolicitacao.html";
+  window.location.href = "infoSolicitacao.html";
 
 });
 
