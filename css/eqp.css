@@ -1,0 +1,108 @@
+@import "components/solicitacoes/modal_solicitacoes.css";
+@import "components/solicitacoes/header_solicitacoes.css";
+@import "/css/variables.css";
+
+/* Reset de estilos para garantir consistência entre os navegadores */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--cor-fundo-branco) !important;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: var(--fonte-principal); /* Aplicar fonte principal */
+  color: var(--cor-texto-padrao); /* Cor de texto padrão */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 80px);
+}
+
+#form-equipamento {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--cor-borda_textBox); /* Substituição da cor da borda */
+  border-radius: 10px;
+  background-color: var(--cor-fundo-branco); /* Cor de fundo branca via variável */
+}
+
+#form-equipamento label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: var(--font-weight-semibold); /* Usar peso semibold padrão */
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-padrao);
+}
+
+.equipamento-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--cor-borda_textBox); /* Substituir cor da borda */
+  font-size: 1rem;
+  font-family: var(--fonte-principal); /* Garantir fonte padrão */
+  color: var(--cor-texto-padrao);
+}
+
+.equipamento-bloco {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px dashed var(--cor-borda_textBox); /* Substituir cor da borda tracejada */
+  border-radius: 8px;
+  background-color: var(--cor-fundo-branco);
+}
+
+#btn-salvar-equipamento {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: var(--cor-primaria); /* Cor principal do botão */
+  color: var(--cor-texto-branco); /* Texto branco */
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--fonte-principal);
+  font-weight: var(--font-weight-semibold);
+}
+
+#btn-salvar-equipamento:hover {
+  background-color: var(--cor-tercearia); /* Efeito hover com verde escuro */
+}
+
+#createEquipamentoTitle {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: var(--fonte-principal);
+  font-weight: var(--font-weight-bold);
+  color: var(--cor-texto-padrao);
+}
+
+.equipamento-selecao {
+  max-width: 600px;
+  margin: 2rem auto 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+}
+
+.equipamento-selecao label {
+  margin-right: 1rem;
+  font-weight: 500;
+}

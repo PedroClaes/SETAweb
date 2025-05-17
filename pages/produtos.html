@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Produtos - SETA</title>
+  <link rel="stylesheet" href="../css/prod.css" />
+</head>
+<body>
+
+<header>
+  <button class="menu-toggle">&#9776;</button>
+  <img src="../assets/visual_identity/Logo_fundo_SETA.jpg" alt="Logotipo SETA" width="100px" height="50px">
+  <nav class="user-navigation" id="user-navigation">
+    <h2 class="user-name"></h2>
+    <button id="navSolic" class="open-sans-semibold" >Solicitações</button>
+    <button id="navDocs" class="admin-only open-sans-semibold">Documentos</button>
+    <button id="navEqup" class="admin-only open-sans-semibold">Equipamentos</button>
+    <button id="navProd" class="admin-only open-sans-semibold">Produtos</button>
+    <button id="exitAccount" class="open-sans-semibold">Sair da conta</button>
+    <button class="request-test-btn open-sans-semibold">Solicitar um ensaio <img src="../assets/icons/Icon_arrow_right.png"
+                                                                                 alt="Ícone de seta"></button>
+  </nav>
+</header>
+<h2 id="titulo-produtos">Cadastrar Produto</h2>
+
+<form id="form-selecao-produto">
+  <fieldset class="produto-selecao">
+    <legend>Selecione os tipos de produto</legend>
+    <label><input type="checkbox" id="check_penetrante"> Penetrante</label>
+    <label><input type="checkbox" id="check_removedor"> Removedor</label>
+    <label><input type="checkbox" id="check_solvente"> Solvente</label>
+  </fieldset>
+</form>
+
+<form id="form-produto" class="produto-form">
+
+  <fieldset class="produto-bloco" id="bloco-penetrante" style="display:none;">
+    <legend>Penetrante</legend>
+    <label>Fabricante:</label>
+    <input type="text" id="penetrante_fabricante" class="produto-input">
+    <label>Lote:</label>
+    <input type="text" id="penetrante_lote" class="produto-input">
+    <label>Penetrante:</label>
+    <input type="text" id="penetrante_nome" class="produto-input">
+    <label>Validade:</label>
+    <input type="text" id="penetrante_validade" class="produto-input">
+  </fieldset>
+
+  <fieldset class="produto-bloco" id="bloco-removedor" style="display:none;">
+    <legend>Removedor</legend>
+    <label>Fabricante:</label>
+    <input type="text" id="removedor_fabricante" class="produto-input">
+    <label>Lote:</label>
+    <input type="text" id="removedor_lote" class="produto-input">
+    <label>Removedor:</label>
+    <input type="text" id="removedor_nome" class="produto-input">
+    <label>Validade:</label>
+    <input type="text" id="removedor_validade" class="produto-input">
+  </fieldset>
+
+  <fieldset class="produto-bloco" id="bloco-solvente" style="display:none;">
+    <legend>Solvente</legend>
+    <label>Fabricante:</label>
+    <input type="text" id="solvente_fabricante" class="produto-input">
+    <label>Lote:</label>
+    <input type="text" id="solvente_lote" class="produto-input">
+    <label>Solvente:</label>
+    <input type="text" id="solvente_nome" class="produto-input">
+    <label>Validade:</label>
+    <input type="text" id="solvente_validade" class="produto-input">
+  </fieldset>
+
+  <button type="submit" id="btn-salvar-produto">Salvar Produto</button>
+</form>
+
+<script type="module" src="../js/produtos/produtos.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Documentos - SETA</title>
+  <link rel="stylesheet" href="../css/doc.css" />
+</head>
+<body>
+<header>
+  <button class="menu-toggle">&#9776;</button>
+  <img src="../assets/visual_identity/Logo_fundo_SETA.jpg" alt="Logotipo SETA" width="100px" height="50px" />
+  <nav class="user-navigation" id="user-navigation">
+    <h2 class="user-name"></h2>
+    <button id="navSolic" class="open-sans-semibold">Solicitações</button>
+    <button id="navDocs" class="admin-only open-sans-semibold">Documentos</button>
+    <button id="navEqup" class="admin-only open-sans-semibold">Equipamentos</button>
+    <button id="navProd" class="admin-only open-sans-semibold">Produtos</button>
+    <button id="exitAccount" class="open-sans-semibold">Sair da conta</button>
+    <button class="request-test-btn open-sans-semibold">
+      Solicitar um ensaio <img src="../assets/icons/Icon_arrow_right.png" alt="Ícone de seta" />
+    </button>
+  </nav>
+</header>
+<section id="criar-documento-container">
+  <h2 id="titulo-criar-doc" class="titulo-secao">Criar Documento</h2>
+
+  <form id="form-documento" class="formulario-doc">
+    <div class="grupo-form">
+      <label for="faixa_dureza" class="label-doc">Faixa de Dureza</label>
+      <input type="text" id="faixa_dureza" name="faixa_dureza" class="input-doc" required>
+    </div>
+
+    <div class="grupo-form">
+      <label for="nome_ref" class="label-doc">Nome de Referência</label>
+      <input type="text" id="nome_ref" name="nome_ref" class="input-doc" required>
+    </div>
+
+    <div class="grupo-form">
+      <label for="procedimento" class="label-doc">Procedimento</label>
+      <input type="text" id="procedimento" name="procedimento" class="input-doc" required>
+    </div>
+
+    <button type="submit" id="btn-salvar-doc" class="botao-salvar">Criar</button>
+  </form>
+</section>
+
+
+<script type="module" src="../js/documentos/doc.js"></script>
+
+</body>
+</html>

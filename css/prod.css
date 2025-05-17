@@ -1,0 +1,126 @@
+@import "components/solicitacoes/modal_solicitacoes.css";
+@import "components/solicitacoes/header_solicitacoes.css";
+@import "components/solicitacoes/form_solicitacoes.css";
+@import "components/solicitacoes/textBox_solicitacoes.css";
+@import "components/solicitacoes/dadospeca.css";
+@import "components/solicitacoes/solicitacoesADM/style_listaSolicitacao.css";
+@import "/css/variables.css";
+
+/* Reset para consistência */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--cor-fundo-branco) !important;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-padrao);
+}
+
+/* Container principal do formulário */
+#form-produto {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid var(--cor-borda_textBox);
+  border-radius: 10px;
+  background-color: var(--cor-fundo-branco);
+}
+
+/* Título centralizado */
+#titulo-produtos {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: var(--fonte-principal);
+  font-weight: var(--font-weight-bold);
+  color: var(--cor-texto-padrao);
+}
+
+/* Labels do formulário */
+#form-produto label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-padrao);
+}
+
+/* Inputs do formulário */
+.produto-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--cor-borda_textBox);
+  font-size: 1rem;
+  font-family: var(--fonte-principal);
+  color: var(--cor-texto-padrao);
+}
+
+/* Blocos de campo para cada tipo de produto */
+.produto-bloco {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px dashed var(--cor-borda_textBox);
+  border-radius: 8px;
+  background-color: var(--cor-fundo-branco);
+}
+
+/* Checkbox container igual ao equipamento-selecao */
+.produto-selecao {
+  max-width: 600px;
+  margin: 2rem auto 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+}
+
+.produto-selecao label {
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+/* Botão salvar */
+#btn-salvar-produto {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-branco);
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--fonte-principal);
+  font-weight: var(--font-weight-semibold);
+  transition: background-color 0.3s ease;
+}
+
+#btn-salvar-produto:hover {
+  background-color: var(--cor-tercearia);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  #form-produto, .produto-selecao {
+    padding: 1rem 0.5rem;
+  }
+
+  .produto-selecao label {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
